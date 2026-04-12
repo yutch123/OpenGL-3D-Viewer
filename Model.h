@@ -7,6 +7,7 @@
 #include "Mesh.h"      // для Mesh и Texture
 #include "Shader.h"    // для Shader
 #include <assimp/scene.h>  // для aiNode, aiScene, aiMesh, aiMaterial, aiTextureType
+#include <assimp/Importer.hpp> // Добавил Cloude (разобраться зачем)
 
 class Model
 {
@@ -38,6 +39,9 @@ class Model
 		std::string getMeshInfo(int index) const { return meshes[index].getInfo(); }
 
 	private:
+
+		Assimp::Importer importer; 
+		const aiScene* scene = nullptr;
 
 		// model data
 		bool pickingEnabled = true; // по умолчанию включено

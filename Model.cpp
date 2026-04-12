@@ -1,52 +1,62 @@
-#include "Model.h"
+п»ї#include "Model.h"
 #include <assimp/Importer.hpp>
 #include <assimp/postprocess.h>
 #include <iostream>
 #include <stb_image.h>
 
-void Model::Draw(Shader & shader)
+void Model::Draw(Shader& shader)
 {
-    // Активируем шейдер
     shader.use();
 
-    // 2. Создаём матрицу модели
     glm::mat4 modelMat = glm::mat4(1.0f);
     modelMat = glm::translate(modelMat, position);
     modelMat = modelMat * rotationMatrix;
-    modelMat = glm::scale(modelMat, glm::vec3(scale)); // применяем scale
-
-
-    // 3. Передаём матрицу шейдеру
+    modelMat = glm::scale(modelMat, glm::vec3(scale));
     shader.setMat4("model", modelMat);
 
     for (size_t i = 0; i < meshes.size(); ++i)
     {
-
         if (!meshVisible[i])
-            continue; // этот меш скрыт, пропускаем
+            continue;
 
-        // проверяем, есть ли цвет для текущего меша
         if (i >= meshColors.size())
-            meshColors.push_back(glm::vec3(1.0f)); // белый по умолчанию
+            meshColors.push_back(glm::vec3(1.0f));
 
-        // если меш не имеет текстур, используем цвет
-        if (meshes[i].textures.empty())
+        if (!meshes[i].textures.empty())
         {
+            // в†ђ РіРѕРІРѕСЂРёРј С€РµР№РґРµСЂСѓ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‚РµРєСЃС‚СѓСЂСѓ
+            shader.setBool("useTexture", true);
+
+            // РїСЂРёРІСЏР·С‹РІР°РµРј diffuse С‚РµРєСЃС‚СѓСЂСѓ Рє СЃР»РѕС‚Сѓ 0
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, meshes[i].textures[0].id);
+            shader.setInt("texture_diffuse1", 0);
+        }
+        else
+        {
+            // в†ђ РЅРµС‚ С‚РµРєСЃС‚СѓСЂС‹ вЂ” РёСЃРїРѕР»СЊР·СѓРµРј С†РІРµС‚
+            shader.setBool("useTexture", false);
             shader.setVec3("objectColor", meshColors[i]);
         }
 
         meshes[i].Draw(shader);
     }
-
 }
 
 void Model::loadModel(const std::string& path)
 {
-    Assimp::Importer importer;
-    const aiScene* scene = importer.ReadFile(path,
-        aiProcess_Triangulate |
-        aiProcess_FlipUVs |
-        aiProcess_CalcTangentSpace);
+    try
+    {
+        scene = importer.ReadFile(path,
+            aiProcess_Triangulate |
+            aiProcess_FlipUVs |
+            aiProcess_CalcTangentSpace);
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "EXCEPTION: " << e.what() << std::endl;
+        return;
+    }
 
     if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
     {
@@ -57,20 +67,20 @@ void Model::loadModel(const std::string& path)
     directory = path.substr(0, path.find_last_of("/\\"));
     processNode(scene->mRootNode, scene);
 
-    // Инициализируем массив видимости после загрузки всех мешей
+    // РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј РјР°СЃСЃРёРІ РІРёРґРёРјРѕСЃС‚Рё РїРѕСЃР»Рµ Р·Р°РіСЂСѓР·РєРё РІСЃРµС… РјРµС€РµР№
     meshVisible.resize(meshes.size(), true);
 
-    // --- Добавляем произвольное описание для каждого меша ---
+    // --- Р”РѕР±Р°РІР»СЏРµРј РїСЂРѕРёР·РІРѕР»СЊРЅРѕРµ РѕРїРёСЃР°РЅРёРµ РґР»СЏ РєР°Р¶РґРѕРіРѕ РјРµС€Р° ---
     for (size_t i = 0; i < meshes.size(); ++i)
     {
-        meshes[i].setInfo(u8"Слой " + std::to_string(i + 1) + u8" в моем произвольном эпителии");
-        // 1 слой произвольного эпителя (...)
-        meshes[i].setInfo(u8"Слой " + std::to_string(i + 1) + u8" в моем произвольном эпителии");
-        // 2 слой произвольного эпителя (...)
-        meshes[i].setInfo(u8"Слой " + std::to_string(i + 1) + u8" в моем произвольном эпителии");
-        // 3 слой произвольного эпителя (...)
-        meshes[i].setInfo(u8"Слой " + std::to_string(i + 1) + u8" в моем произвольном эпителии");
-        // 4 слой произвольного эпителя (...)
+        meshes[i].setInfo(u8"РЎР»РѕР№ " + std::to_string(i + 1) + u8" РІ РјРѕРµРј РїСЂРѕРёР·РІРѕР»СЊРЅРѕРј СЌРїРёС‚РµР»РёРё");
+        // 1 СЃР»РѕР№ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ СЌРїРёС‚РµР»СЏ (...)
+        meshes[i].setInfo(u8"РЎР»РѕР№ " + std::to_string(i + 1) + u8" РІ РјРѕРµРј РїСЂРѕРёР·РІРѕР»СЊРЅРѕРј СЌРїРёС‚РµР»РёРё");
+        // 2 СЃР»РѕР№ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ СЌРїРёС‚РµР»СЏ (...)
+        meshes[i].setInfo(u8"РЎР»РѕР№ " + std::to_string(i + 1) + u8" РІ РјРѕРµРј РїСЂРѕРёР·РІРѕР»СЊРЅРѕРј СЌРїРёС‚РµР»РёРё");
+        // 3 СЃР»РѕР№ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ СЌРїРёС‚РµР»СЏ (...)
+        meshes[i].setInfo(u8"РЎР»РѕР№ " + std::to_string(i + 1) + u8" РІ РјРѕРµРј РїСЂРѕРёР·РІРѕР»СЊРЅРѕРј СЌРїРёС‚РµР»РёРё");
+        // 4 СЃР»РѕР№ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ СЌРїРёС‚РµР»СЏ (...)
     }
 }
 
@@ -81,16 +91,16 @@ size_t Model::getMeshCount() const {
 void Model::drawForPicking(Shader& shader)
 {
     if (!pickingEnabled)
-        return; // защита от случайного выбора: ничего не делаем
+        return; // Р·Р°С‰РёС‚Р° РѕС‚ СЃР»СѓС‡Р°Р№РЅРѕРіРѕ РІС‹Р±РѕСЂР°: РЅРёС‡РµРіРѕ РЅРµ РґРµР»Р°РµРј
 
     shader.use();
 
     for (size_t i = 0; i < meshes.size(); ++i)
     {
         if (!meshVisible[i])
-            continue; // пропускаем скрытые меши
+            continue; // РїСЂРѕРїСѓСЃРєР°РµРј СЃРєСЂС‹С‚С‹Рµ РјРµС€Рё
 
-        unsigned int id = i + 1; // ID для picking
+        unsigned int id = i + 1; // ID РґР»СЏ picking
         glm::vec3 pickColor(
             (id & 0xFF) / 255.0f,
             ((id >> 8) & 0xFF) / 255.0f,
@@ -100,6 +110,54 @@ void Model::drawForPicking(Shader& shader)
         shader.setVec3("pickingColor", pickColor);
         meshes[i].DrawForPicking(shader, pickColor);
     }
+}
+
+unsigned int TextureFromMemory(const aiTexture* tex)
+{
+    unsigned int textureID;
+    glGenTextures(1, &textureID);
+
+    int width, height, nrComponents;
+    unsigned char* data = nullptr;
+
+    if (tex->mHeight == 0)
+    {
+        // РЎР¶Р°С‚С‹Р№ С„РѕСЂРјР°С‚ (png/jpg РІРЅСѓС‚СЂРё glb) вЂ” РґРµРєРѕРґРёСЂСѓРµРј С‡РµСЂРµР· stb
+        data = stbi_load_from_memory(
+            reinterpret_cast<unsigned char*>(tex->pcData),
+            tex->mWidth, &width, &height, &nrComponents, 0);
+    }
+    else
+    {
+        // РќРµСЃР¶Р°С‚С‹Р№ RGBA8888
+        width = tex->mWidth;
+        height = tex->mHeight;
+        nrComponents = 4;
+        data = reinterpret_cast<unsigned char*>(tex->pcData);
+    }
+
+    if (data)
+    {
+        GLenum format = (nrComponents == 4) ? GL_RGBA :
+            (nrComponents == 3) ? GL_RGB : GL_RED;
+
+        glBindTexture(GL_TEXTURE_2D, textureID);
+        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        if (tex->mHeight == 0) stbi_image_free(data); // С‚РѕР»СЊРєРѕ РґР»СЏ СЃР¶Р°С‚С‹С… С„РѕСЂРјР°С‚РѕРІ
+    }
+    else
+    {
+        std::cerr << "Embedded texture failed to load" << std::endl;
+    }
+
+    return textureID;
 }
 
 unsigned int TextureFromFile(const char* path, const std::string& directory, bool gamma = false)
@@ -132,7 +190,7 @@ unsigned int TextureFromFile(const char* path, const std::string& directory, boo
         glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
 
-        // настройки фильтрации и обёртки
+        // РЅР°СЃС‚СЂРѕР№РєРё С„РёР»СЊС‚СЂР°С†РёРё Рё РѕР±С‘СЂС‚РєРё
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
@@ -156,12 +214,12 @@ void Model::processNode(aiNode* node, const aiScene* scene)
     {
         aiMesh* aiMesh = scene->mMeshes[node->mMeshes[i]];
 
-        // создаём Mesh один раз
+        // СЃРѕР·РґР°С‘Рј Mesh РѕРґРёРЅ СЂР°Р·
         Mesh newMesh = processMesh(aiMesh, scene);
         meshes.push_back(newMesh);
 
-        // сохраняем цвет для этого меша
-        glm::vec3 meshColor(1.0f); // по умолчанию белый
+        // СЃРѕС…СЂР°РЅСЏРµРј С†РІРµС‚ РґР»СЏ СЌС‚РѕРіРѕ РјРµС€Р°
+        glm::vec3 meshColor(1.0f); // РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ Р±РµР»С‹Р№
         if (aiMesh->mMaterialIndex >= 0)
         {
             aiMaterial* material = scene->mMaterials[aiMesh->mMaterialIndex];
@@ -172,7 +230,7 @@ void Model::processNode(aiNode* node, const aiScene* scene)
         meshColors.push_back(meshColor);
     }
 
-    // Рекурсивная обработка дочерних узлов
+    // Р РµРєСѓСЂСЃРёРІРЅР°СЏ РѕР±СЂР°Р±РѕС‚РєР° РґРѕС‡РµСЂРЅРёС… СѓР·Р»РѕРІ
     for (unsigned int i = 0; i < node->mNumChildren; i++)
     {
         processNode(node->mChildren[i], scene);
@@ -185,7 +243,7 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene)
     std::vector<unsigned int> indices;
     std::vector<Texture> textures;
 
-    // Вершины
+    // Р’РµСЂС€РёРЅС‹
     for (unsigned int i = 0; i < mesh->mNumVertices; i++)
     {
         Vertex vertex;
@@ -200,7 +258,7 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene)
         vertices.push_back(vertex);
     }
 
-    // Индексы
+    // РРЅРґРµРєСЃС‹
     for (unsigned int i = 0; i < mesh->mNumFaces; i++)
     {
         aiFace face = mesh->mFaces[i];
@@ -208,7 +266,7 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene)
             indices.push_back(face.mIndices[j]);
     }
 
-    // Материалы
+    // РњР°С‚РµСЂРёР°Р»С‹
     if (mesh->mMaterialIndex >= 0)
     {
         aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
@@ -245,13 +303,30 @@ std::vector<Texture> Model::loadMaterialTextures(aiMaterial* mat, aiTextureType 
         }
 
         if (!skip)
-        {   // if texture hasn't been loaded already, load it
+        {
             Texture texture;
-            texture.id = TextureFromFile(str.C_Str(), directory, false);
             texture.type = typeName;
             texture.path = str.C_Str();
+
+            // Р•СЃР»Рё РїСѓС‚СЊ РЅР°С‡РёРЅР°РµС‚СЃСЏ СЃ '*' вЂ” embedded-С‚РµРєСЃС‚СѓСЂР° РІРЅСѓС‚СЂРё GLB
+            if (str.length > 0 && str.C_Str()[0] == '*')
+            {
+                int texIndex = std::atoi(str.C_Str() + 1); // РёРЅРґРµРєСЃ РїРѕСЃР»Рµ '*'
+                if (scene && texIndex < (int)scene->mNumTextures)
+                    texture.id = TextureFromMemory(scene->mTextures[texIndex]);
+                else
+                {
+                    std::cerr << "Invalid embedded texture index: " << texIndex << std::endl;
+                    texture.id = 0;
+                }
+            }
+            else
+            {
+                texture.id = TextureFromFile(str.C_Str(), directory, false);
+            }
+
             textures.push_back(texture);
-            textures_loaded.push_back(texture); // add to loaded textures
+            textures_loaded.push_back(texture);
         }
     }
 
@@ -263,13 +338,13 @@ void Model::setRotationMatrix(const glm::mat4& rot)
     rotationMatrix = rot;
 }
 
-// Выбор меша
+// Р’С‹Р±РѕСЂ РјРµС€Р°
 
 void Model::selectMesh(int index)
 {
     if (index < 0 || index >= (int)meshes.size())
     {
-        selectedMeshIndex = -1; // сброс выбора
+        selectedMeshIndex = -1; // СЃР±СЂРѕСЃ РІС‹Р±РѕСЂР°
 
         for (size_t i = 0; i < meshVisible.size(); ++i)
             meshVisible[i] = true;
@@ -277,7 +352,7 @@ void Model::selectMesh(int index)
         return;
     }
 
-    // Выбор конкретного меша
+    // Р’С‹Р±РѕСЂ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РјРµС€Р°
     selectedMeshIndex = index;
 
     for (size_t i = 0; i < meshVisible.size(); ++i)

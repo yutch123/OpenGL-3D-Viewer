@@ -2,6 +2,8 @@
 // (например, дополнительные утилиты для кватернионов)
 #define GLM_ENABLE_EXPERIMENTAL
 
+#define NOMINMAX 
+
 // =======================
 // GLM — математика
 // =======================
@@ -67,6 +69,9 @@
 #include <assimp/postprocess.h>
 
 #include <Model.h>
+
+#include <Windows.h>
+#include <commdlg.h>
 
 unsigned int pickingFBO = 0;
 unsigned int pickingTexture = 0;
@@ -137,6 +142,23 @@ const GLfloat zoomSpeed = 10.0f;
 Arcball arcball(SCR_WIDTH, SCR_HEIGHT);
 
 Model* loadedModel = nullptr; // указатель на модель
+
+std::string openFileDialog()
+{
+	char filename[MAX_PATH] = "";
+	OPENFILENAMEA ofn = {};
+	ofn.lStructSize = sizeof(ofn);
+	ofn.hwndOwner = NULL;
+	ofn.lpstrFilter = "3D Models\0*.obj;*.fbx;*.glb;*.gltf\0All Files\0*.*\0";
+	ofn.lpstrFile = filename;
+	ofn.nMaxFile = MAX_PATH;
+	ofn.Flags = OFN_FILEMUSTEXIST | OFN_PATHMUSTEXIST;
+
+	if (GetOpenFileNameA(&ofn))
+		return std::string(filename);
+
+	return "";
+}
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
@@ -314,15 +336,17 @@ int main()
 
 		if (editorUI.loadModelRequested)
 		{
-			if (loadedModel) delete loadedModel;
-			loadedModel = new Model("assets/models/Model3D.obj");
+			std::string path = openFileDialog();
+			if (!path.empty())
+			{
+				if (loadedModel) delete loadedModel;
+				loadedModel = new Model(path);
 
-			glm::vec3 modelSize = loadedModel->getSize();
-			float maxDimension = glm::max(glm::max(modelSize.x, modelSize.y), modelSize.z);
-			if (maxDimension <= 0.0f) maxDimension = 1.0f;
-			float scaleFactor = 1.0f / maxDimension;
-			loadedModel->setScale(scaleFactor);
-
+				glm::vec3 modelSize = loadedModel->getSize();
+				float maxDimension = glm::max(glm::max(modelSize.x, modelSize.y), modelSize.z);
+				if (maxDimension <= 0.0f) maxDimension = 1.0f;
+				loadedModel->setScale(1.0f / maxDimension);
+			}
 			editorUI.loadModelRequested = false;
 		}
 
