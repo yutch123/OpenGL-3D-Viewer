@@ -304,14 +304,19 @@ int main()
 	{
 		processInput(window); // Обработка пользовательского ввода
 
-		// 
-
 		// Очистка цветового и глубинного буферов
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f); 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 
 		// Используем шейдер
 		ourShader.use();
+
+		// Глобальные параметры для света
+		ourShader.setVec3("lightPos", glm::vec3(3.0f, 3.0f, 3.0f));
+		ourShader.setVec3("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
+
+		// Зависимость света от камеры
+		ourShader.setVec3("viewPos", glm::vec3(0.0f, 0.0f, 3.0f));
 
 		// Устанавливаем матрицы (view, projection, model)
 		glm::mat4 view = glm::lookAt(glm::vec3(0, 0, 3), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0));
