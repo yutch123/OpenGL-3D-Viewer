@@ -3,6 +3,15 @@
 #include "imgui_impl_opengl3.h"
 #include "imgui_impl_glfw.h"
 
+// Глобальные параметры света из Main.cpp
+extern glm::vec3 lightPos1;
+extern glm::vec3 lightColor1;
+extern glm::vec3 lightPos2;
+extern glm::vec3 lightColor2;
+
+extern float lightIntensity1;
+extern float lightIntensity2;
+
 // Начало нового кадра ImGui — нужно вызывать каждый рендер-цикл
 void EditorUI::beginFrame()
 {
@@ -40,6 +49,39 @@ void EditorUI::render(Model* model, bool& isolateSelectedMesh)
         }
     }
 
+    // Окно управления светом
+    ImVec2 windowlightSize(320.0f, 0.0f); // нормальная ширина
+    ImVec2 windowlightPos(
+        ImGui::GetIO().DisplaySize.x - windowlightSize.x - 10.0f,
+        ImGui::GetIO().DisplaySize.y - 10.0f
+    );
+
+    ImGui::SetNextWindowPos(windowlightPos, ImGuiCond_Always, ImVec2(0.0f, 1.0f)); // якорь снизу
+    ImGui::SetNextWindowSize(windowlightSize, ImGuiCond_Always);
+
+    ImGui::Begin(
+        "Lighting",
+        nullptr,
+        ImGuiWindowFlags_NoMove |
+        ImGuiWindowFlags_NoResize |
+        ImGuiWindowFlags_AlwaysAutoResize
+    );
+
+    ImGui::Text("Main Light");
+    ImGui::DragFloat3("Position 1", &lightPos1[0], 0.1f, -20.0f, 20.0f);
+    ImGui::ColorEdit3("Color 1", &lightColor1[0]);
+    ImGui::DragFloat("Intensity 1", &lightIntensity1, 0.05f, 0.0f, 5.0f);
+
+    ImGui::Separator();
+
+    ImGui::Text("Fill Light");
+    ImGui::DragFloat3("Position 2", &lightPos2[0], 0.1f, -20.0f, 20.0f);
+    ImGui::ColorEdit3("Color 2", &lightColor2[0]);
+    ImGui::DragFloat("Intensity 2", &lightIntensity2, 0.05f, 0.0f, 5.0f);
+
+    ImGui::End();
+
+    // Окно дополнительных функций
     ImVec2 windowPos(10.0f, ImGui::GetIO().DisplaySize.y - 150.0f);
     ImGui::SetNextWindowPos(windowPos, ImGuiCond_Always);
 

@@ -147,6 +147,17 @@ Arcball arcball(SCR_WIDTH, SCR_HEIGHT);
 Model* loadedModel = nullptr; // указатель на модель
 bool gIsolateSelectedMesh = false;
 
+// Переменные для света
+glm::vec3 lightPos1 = glm::vec3(3.0f, 3.0f, 3.0f);
+glm::vec3 lightColor1 = glm::vec3(1.0f);
+
+glm::vec3 lightPos2 = glm::vec3(-3.0f, 2.0f, 2.0f);
+glm::vec3 lightColor2 = glm::vec3(0.5f);
+
+// Параметры света
+float lightIntensity1 = 1.2f;
+float lightIntensity2 = 0.5f;
+
 std::string openFileDialog()
 {
 	char filename[MAX_PATH] = "";
@@ -268,6 +279,16 @@ int main()
 	// Создаем шейдер и устанавливаем текстурный слот
 	Shader ourShader("shaders/3.3.shader.vs", "shaders/3.3.shader.fs");
 	ourShader.use();
+
+	// Добавляем доп. источники света
+	ourShader.setVec3("lightPos1", lightPos1);
+	ourShader.setVec3("lightColor1", lightColor1);
+	ourShader.setVec3("lightPos2", lightPos2);
+	ourShader.setVec3("lightColor2", lightColor2);
+
+	ourShader.setFloat("lightIntensity1", lightIntensity1);
+	ourShader.setFloat("lightIntensity2", lightIntensity2);
+
 	ourShader.setInt("texture1", 0);
 
 	// Генерация и настройка текстуры
@@ -315,19 +336,20 @@ int main()
 		// Используем шейдер
 		ourShader.use();
 
-		// Глобальные параметры для света
-		ourShader.setVec3("lightPos", glm::vec3(3.0f, 3.0f, 3.0f));
-		ourShader.setVec3("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
+		// Парметры света
+		ourShader.setVec3("lightPos1", lightPos1);
+		ourShader.setVec3("lightColor1", lightColor1);
+		ourShader.setVec3("lightPos2", lightPos2);
+		ourShader.setVec3("lightColor2", lightColor2);
 
 		// Зависимость света от камеры
-		ourShader.setVec3("viewPos", glm::vec3(0.0f, 0.0f, 3.0f));
+		ourShader.setVec3("viewPos", glm::vec3(0.0f, 0.0f, cameraDistance));
 
 		// Устанавливаем матрицы (view, projection, model)
 		glm::mat4 view = glm::lookAt(glm::vec3(0, 0, cameraDistance),
 			glm::vec3(0, 0, 0),
 			glm::vec3(0, 1, 0));
 		glm::mat4 projection = glm::perspective(glm::radians(fov), (float)gWidth / gHeight, 0.1f, 100.0f);
-		glm::mat4 model = arcball.getRotationMatrix();
 
 		ourShader.setMat4("view", view);
 		ourShader.setMat4("projection", projection);
