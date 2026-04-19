@@ -10,7 +10,7 @@ public:
 	// Начало нового кадра ImGui — нужно вызывать один раз в цикле рендеринга
 	void beginFrame();
 	// Отрисовка UI и вывод на экран
-	void render(Model* model);
+	void render(Model* model, bool& isolateSelectedMesh);
 
 	bool loadModelRequested = false;
 

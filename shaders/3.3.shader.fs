@@ -24,23 +24,27 @@ void main()
     else
         baseColor = objectColor;
 
-    float ambientStrength = 0.3;
-    vec3 ambient = ambientStrength * lightColor;
+    vec3 ambient = 0.25 * baseColor;
 
     vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(lightPos - FragPos);
     float diff = max(dot(norm, lightDir), 0.0);
-    vec3 deffuse = diff * lightColor;
+    vec3 deffuse = 1.2 * diff * lightColor;
+    vec3 lightPos2 = vec3(-3.0, 2.0, 2.0);
+    vec3 lightColor2 = vec3(0.25);
 
-    float specularStrength = 0.5;
+    float specularStrength = 0.2;
 
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 reflectDir = reflect(-lightDir, norm);
 
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
-    vec3 specular = specularStrength * spec * lightColor;
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 16);
+    vec3 specular = specularStrength * spec * lightColor * 0.5;
+    vec3 lightDir2 = normalize(lightPos2 - FragPos);
+    float diff2 = max(dot(norm, lightDir2), 0.0);
+    vec3 diffuse2 = diff2 * lightColor2;
 
-    vec3 result = (ambient + deffuse) * baseColor + specular;
+    vec3 result = (ambient + deffuse + diffuse2) * baseColor + specular;
 
     result = pow(result, vec3(1.0 / 2.2));
 

@@ -12,11 +12,9 @@ void EditorUI::beginFrame()
 }
 
 // Отрисовка UI и вывод на экран
-void EditorUI::render(Model* model)
+void EditorUI::render(Model* model, bool& isolateSelectedMesh)
 {
     drawModelWindow(); // новое окно загрузки модели
-
-    ImGuiIO& io = ImGui::GetIO();
 
     if (model)
     {
@@ -31,38 +29,55 @@ void EditorUI::render(Model* model)
             ImGui::SetNextWindowSize(ImVec2(280, 150)); // ширина окна
 
             ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar |
-                ImGuiWindowFlags_NoResize |
-                ImGuiWindowFlags_NoMove |
-                ImGuiWindowFlags_NoScrollbar |
-                ImGuiWindowFlags_NoCollapse;
+                                     ImGuiWindowFlags_NoResize |
+                                     ImGuiWindowFlags_NoMove |
+                                     ImGuiWindowFlags_NoScrollbar |
+                                     ImGuiWindowFlags_NoCollapse;
 
             ImGui::Begin("Mesh Info", nullptr, flags);
-
             ImGui::TextWrapped("%s", selectedInfo.c_str());
-
             ImGui::End();
         }
     }
 
-    // Размер окна Debug
-    ImVec2 windowSize(200, 80); // <-- объявляем сначала!
-
-    // Позиция окна в левом нижнем углу
-    ImVec2 windowPos(10.0f, ImGui::GetIO().DisplaySize.y - windowSize.y - 10.0f);
+    ImVec2 windowPos(10.0f, ImGui::GetIO().DisplaySize.y - 150.0f);
     ImGui::SetNextWindowPos(windowPos, ImGuiCond_Always);
 
-    ImGui::Begin("Additional functions:", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove); // окно не ресайзится пользователем
-    if (ImGui::Button("Show All Meshes")) // кнопка в UI
+    ImGui::Begin("Additional functions:", nullptr,
+        ImGuiWindowFlags_NoResize |
+        ImGuiWindowFlags_NoMove |
+        ImGuiWindowFlags_AlwaysAutoResize);
+    
+    if (ImGui::Button("Show All Meshes"))
     {
         if (model)
-            model->selectMesh(-1); // сбрасываем выбор, рисуем все меши
+        {
+            model->selectMesh(-1);
+            model->showAllMeshes();
+            isolateSelectedMesh = false;
+        }
     }
 
-    static bool pickingEnabled = true;
-    ImGui::Checkbox("Enable mesh separation", &pickingEnabled);
+    if (ImGui::Checkbox("Isolate selected mesh", &isolateSelectedMesh))
+    {
+        if (model)
+        {
+            if (isolateSelectedMesh)
+                model->isolateSelectedMesh();
+            else
+                model->showAllMeshes();
+        }
+    }
 
-    if (model)
-        model->setPickingEnabled(pickingEnabled);
+    if (!isolateSelectedMesh)
+    {
+        ImGui::TextDisabled("Click selects a mesh without hiding the others.");
+    }
+
+    else if (model && model->getSelectedMesh() < 0)
+    {
+        ImGui::TextDisabled("Select a mesh by clicking on the model.");
+    }
 
     ImGui::End();
 

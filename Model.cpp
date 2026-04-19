@@ -8,10 +8,7 @@ void Model::Draw(Shader& shader)
 {
     shader.use();
 
-    glm::mat4 modelMat = glm::mat4(1.0f);
-    modelMat = glm::translate(modelMat, position);
-    modelMat = modelMat * rotationMatrix;
-    modelMat = glm::scale(modelMat, glm::vec3(scale));
+    glm::mat4 modelMat = getModelMatrix();
     shader.setMat4("model", modelMat);
 
     for (size_t i = 0; i < meshes.size(); ++i)
@@ -24,17 +21,14 @@ void Model::Draw(Shader& shader)
 
         if (!meshes[i].textures.empty())
         {
-            // ← говорим шейдеру использовать текстуру
             shader.setBool("useTexture", true);
 
-            // привязываем diffuse текстуру к слоту 0
             glActiveTexture(GL_TEXTURE0);
             glBindTexture(GL_TEXTURE_2D, meshes[i].textures[0].id);
             shader.setInt("texture_diffuse1", 0);
         }
         else
         {
-            // ← нет текстуры — используем цвет
             shader.setBool("useTexture", false);
             shader.setVec3("objectColor", meshColors[i]);
         }
@@ -158,6 +152,19 @@ unsigned int TextureFromMemory(const aiTexture* tex)
     }
 
     return textureID;
+}
+
+glm::mat4 Model::getModelMatrix() const
+{
+    glm::vec3 center = getCenter();
+
+    glm::mat4 modelMat = glm::mat4(1.0f);
+    modelMat = glm::translate(modelMat, position);
+    modelMat = modelMat * rotationMatrix;
+    modelMat = glm::scale(modelMat, glm::vec3(scale));
+    modelMat = glm::translate(modelMat, -center);
+
+    return modelMat;
 }
 
 unsigned int TextureFromFile(const char* path, const std::string& directory, bool gamma = false)
@@ -344,20 +351,30 @@ void Model::selectMesh(int index)
 {
     if (index < 0 || index >= (int)meshes.size())
     {
-        selectedMeshIndex = -1; // сброс выбора
-
-        for (size_t i = 0; i < meshVisible.size(); ++i)
-            meshVisible[i] = true;
-
+        selectedMeshIndex = -1;
         return;
     }
 
     // Выбор конкретного меша
     selectedMeshIndex = index;
+}
+
+void Model::showAllMeshes()
+{
+    for (size_t i = 0; i < meshVisible.size(); ++i)
+        meshVisible[i] = true;
+}
+
+void Model::isolateSelectedMesh()
+{
+    if (selectedMeshIndex < 0 || selectedMeshIndex >= (int)meshVisible.size())
+    {
+        showAllMeshes();
+        return;
+    }
 
     for (size_t i = 0; i < meshVisible.size(); ++i)
-        meshVisible[i] = (i == index);
-
+        meshVisible[i] = ((int)i == selectedMeshIndex);
 }
 
 int Model::getSelectedMesh() const {
@@ -366,4 +383,9 @@ int Model::getSelectedMesh() const {
 
 Mesh& Model::getMesh(int index) {
     return meshes[index];
+}
+
+float Model::getBoundingRadius() const
+{
+    return glm::length(getSize()) * 0.5f;
 }

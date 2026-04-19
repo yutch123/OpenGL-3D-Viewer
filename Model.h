@@ -21,12 +21,20 @@ class Model
 		void Draw(Shader& shader);
 		void selectMesh(int index);
 		void setRotationMatrix(const glm::mat4& rot);
+		void showAllMeshes();
+
+		void isolateSelectedMesh();
 
 		int getSelectedMesh() const;
 
 		Mesh& getMesh(int index);
 
 		glm::vec3 getSize() const { return maxBounds - minBounds; }
+		glm::vec3 getCenter() const { return (minBounds + maxBounds) * 0.5f; }
+		glm::mat4 getModelMatrix() const;
+
+		float getBoundingRadius() const;
+
 		void setScale(float s) { scale = s; }
 		float getScale() const { return scale; }  
 

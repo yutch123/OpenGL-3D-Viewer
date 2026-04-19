@@ -122,6 +122,9 @@ int gHeight = SCR_HEIGHT;
 // Используется при построении матрицы проекции.
 float fov = 45.0f;
 
+// Глобальная переменная камеры
+float cameraDistance = 3.0f;
+
 // Минимально допустимое поле зрения (максимальный зум)
 const GLfloat minFov = 15.0f;
 
@@ -142,6 +145,7 @@ const GLfloat zoomSpeed = 10.0f;
 Arcball arcball(SCR_WIDTH, SCR_HEIGHT);
 
 Model* loadedModel = nullptr; // указатель на модель
+bool gIsolateSelectedMesh = false;
 
 std::string openFileDialog()
 {
@@ -319,21 +323,14 @@ int main()
 		ourShader.setVec3("viewPos", glm::vec3(0.0f, 0.0f, 3.0f));
 
 		// Устанавливаем матрицы (view, projection, model)
-		glm::mat4 view = glm::lookAt(glm::vec3(0, 0, 3), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0));
+		glm::mat4 view = glm::lookAt(glm::vec3(0, 0, cameraDistance),
+			glm::vec3(0, 0, 0),
+			glm::vec3(0, 1, 0));
 		glm::mat4 projection = glm::perspective(glm::radians(fov), (float)gWidth / gHeight, 0.1f, 100.0f);
 		glm::mat4 model = arcball.getRotationMatrix();
 
-		// применяем масштаб только если модель загружена
-		if (loadedModel)
-		{
-			float s = loadedModel->getScale();
-			if (s <= 0.0f) s = 1.0f; // защита от нуля
-			model = glm::scale(model, glm::vec3(s));
-		}
-
 		ourShader.setMat4("view", view);
 		ourShader.setMat4("projection", projection);
-		ourShader.setMat4("model", model);
 
 		// Привязываем текстуру перед отрисовкой
 		glActiveTexture(GL_TEXTURE0);
@@ -347,10 +344,25 @@ int main()
 				if (loadedModel) delete loadedModel;
 				loadedModel = new Model(path);
 
+				gIsolateSelectedMesh = false;
+				loadedModel->selectMesh(-1);
+				loadedModel->showAllMeshes();
+
 				glm::vec3 modelSize = loadedModel->getSize();
 				float maxDimension = glm::max(glm::max(modelSize.x, modelSize.y), modelSize.z);
 				if (maxDimension <= 0.0f) maxDimension = 1.0f;
 				loadedModel->setScale(1.0f / maxDimension);
+
+				// Camera distance
+
+				float radius = loadedModel->getBoundingRadius() * loadedModel->getScale();
+				if (radius <= 0.0f) radius = 1.0f;
+
+				// Небольшой запас, чтобы модель не прилипала к краям кадра
+				float fitFactor = 1.4f;
+
+				// Переводим FOV в радианы и считаем расстояние
+				cameraDistance = (radius * fitFactor) / tan(glm::radians(fov) * 0.5f);
 			}
 			editorUI.loadModelRequested = false;
 		}
@@ -363,7 +375,7 @@ int main()
 
 		// Рендеринг ImGui
 		editorUI.beginFrame();
-		editorUI.render(loadedModel);
+		editorUI.render(loadedModel, gIsolateSelectedMesh);
 
 		glfwSwapBuffers(window); // Меняем цветовые буферы местами
 		glfwPollEvents(); // Обрабатываем события ввода
@@ -523,10 +535,11 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 	{
 		if (!loadedModel || !pickingShader) return;
 
-		glm::mat4 view = glm::lookAt(glm::vec3(0, 0, 3), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0));
+		glm::mat4 view = glm::lookAt(glm::vec3(0, 0, cameraDistance),
+			glm::vec3(0, 0, 0),
+			glm::vec3(0, 1, 0));
 		glm::mat4 projection = glm::perspective(glm::radians(fov), (float)gWidth / gHeight, 0.1f, 100.0f);
-		glm::mat4 model = arcball.getRotationMatrix();
-		if (loadedModel) model = glm::scale(model, glm::vec3(loadedModel->getScale()));
+		glm::mat4 model = loadedModel->getModelMatrix();
 
 		// Привязываем FBO для Color Picking
 		glBindFramebuffer(GL_FRAMEBUFFER, pickingFBO);
@@ -555,6 +568,12 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 		if (pickedID < loadedModel->getMeshCount())
 		{
 			loadedModel->selectMesh(pickedID);
+
+			if (gIsolateSelectedMesh)
+				loadedModel->isolateSelectedMesh();
+			else
+				loadedModel->showAllMeshes();
+
 			std::cout << "Selected mesh: " << pickedID << std::endl;
 		}
 	}
