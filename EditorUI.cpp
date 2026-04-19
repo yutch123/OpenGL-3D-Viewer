@@ -82,8 +82,8 @@ void EditorUI::render(Model* model, bool& isolateSelectedMesh)
     ImGui::End();
 
     // Окно дополнительных функций
-    ImVec2 windowPos(10.0f, ImGui::GetIO().DisplaySize.y - 150.0f);
-    ImGui::SetNextWindowPos(windowPos, ImGuiCond_Always);
+    ImVec2 windowPos(10.0f, ImGui::GetIO().DisplaySize.y - 10.0f);
+    ImGui::SetNextWindowPos(windowPos, ImGuiCond_Always, ImVec2(0.0f, 1.0f));
 
     ImGui::Begin("Additional functions:", nullptr,
         ImGuiWindowFlags_NoResize |

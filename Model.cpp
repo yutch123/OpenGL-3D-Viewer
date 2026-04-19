@@ -2,7 +2,23 @@
 #include <assimp/Importer.hpp>
 #include <assimp/postprocess.h>
 #include <iostream>
+#include <cstdlib>
+#include <cfloat>
+#include <algorithm>
 #include <stb_image.h>
+
+namespace
+{
+    int FindDiffuseTextureIndex(const std::vector<Texture>& textures)
+    {
+        for (size_t i = 0; i < textures.size(); ++i)
+        {
+            if (textures[i].type == "texture_diffuse" && textures[i].id != 0)
+                return static_cast<int>(i);
+        }
+        return -1;
+    }
+}
 
 void Model::Draw(Shader& shader)
 {
@@ -19,18 +35,39 @@ void Model::Draw(Shader& shader)
         if (i >= meshColors.size())
             meshColors.push_back(glm::vec3(1.0f));
 
-        if (!meshes[i].textures.empty())
+        const auto& textures = meshes[i].textures;
+
+        std::cout << "[Draw] Mesh " << i
+            << " | textures count = " << textures.size()
+            << std::endl;
+
+        for (size_t t = 0; t < textures.size(); ++t)
+        {
+            std::cout << "    texture[" << t << "]"
+                << " | id = " << textures[t].id
+                << " | type = " << textures[t].type
+                << " | path = " << textures[t].path
+                << std::endl;
+        }
+
+        int diffuseIndex = FindDiffuseTextureIndex(textures);
+
+        if (diffuseIndex >= 0)
         {
             shader.setBool("useTexture", true);
 
             glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, meshes[i].textures[0].id);
+            glBindTexture(GL_TEXTURE_2D, textures[diffuseIndex].id);
             shader.setInt("texture_diffuse1", 0);
         }
         else
         {
             shader.setBool("useTexture", false);
             shader.setVec3("objectColor", meshColors[i]);
+
+            std::cout << "[Draw] Mesh " << i
+                << " has no valid diffuse texture, fallback to objectColor"
+                << std::endl;
         }
 
         meshes[i].Draw(shader);
@@ -39,62 +76,65 @@ void Model::Draw(Shader& shader)
 
 void Model::loadModel(const std::string& path)
 {
-    try
-    {
-        scene = importer.ReadFile(path,
-            aiProcess_Triangulate |
-            aiProcess_FlipUVs |
-            aiProcess_CalcTangentSpace);
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << "EXCEPTION: " << e.what() << std::endl;
-        return;
-    }
+    std::cout << "[loadModel] Loading model: " << path << std::endl;
 
-    if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
+    bool isGLTF =
+        path.find(".glb") != std::string::npos ||
+        path.find(".gltf") != std::string::npos;
+
+    unsigned int flags =
+        aiProcess_Triangulate |
+        aiProcess_CalcTangentSpace;
+
+    if (!isGLTF)
+        flags |= aiProcess_FlipUVs;
+
+    scene = importer.ReadFile(path, flags);
+
+    if (!scene || (scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE) || !scene->mRootNode)
     {
         std::cerr << "ERROR::ASSIMP::" << importer.GetErrorString() << std::endl;
         return;
     }
 
     directory = path.substr(0, path.find_last_of("/\\"));
+    std::cout << "[loadModel] Directory: " << directory << std::endl;
+
+    meshes.clear();
+    meshColors.clear();
+    textures_loaded.clear();
+    meshVisible.clear();
+
     processNode(scene->mRootNode, scene);
 
-    // Инициализируем массив видимости после загрузки всех мешей
     meshVisible.resize(meshes.size(), true);
 
-    // --- Добавляем произвольное описание для каждого меша ---
     for (size_t i = 0; i < meshes.size(); ++i)
     {
         meshes[i].setInfo(u8"Слой " + std::to_string(i + 1) + u8" в моем произвольном эпителии");
-        // 1 слой произвольного эпителя (...)
-        meshes[i].setInfo(u8"Слой " + std::to_string(i + 1) + u8" в моем произвольном эпителии");
-        // 2 слой произвольного эпителя (...)
-        meshes[i].setInfo(u8"Слой " + std::to_string(i + 1) + u8" в моем произвольном эпителии");
-        // 3 слой произвольного эпителя (...)
-        meshes[i].setInfo(u8"Слой " + std::to_string(i + 1) + u8" в моем произвольном эпителии");
-        // 4 слой произвольного эпителя (...)
     }
+
+    std::cout << "[loadModel] Total meshes loaded: " << meshes.size() << std::endl;
 }
 
-size_t Model::getMeshCount() const {
+size_t Model::getMeshCount() const
+{
     return meshes.size();
 }
 
 void Model::drawForPicking(Shader& shader)
 {
     if (!pickingEnabled)
-        return; // защита от случайного выбора: ничего не делаем
+        return;
 
     shader.use();
 
     for (size_t i = 0; i < meshes.size(); ++i)
     {
         if (!meshVisible[i])
-            continue; // пропускаем скрытые меши
+            continue;
 
-        unsigned int id = i + 1; // ID для picking
+        unsigned int id = static_cast<unsigned int>(i + 1);
         glm::vec3 pickColor(
             (id & 0xFF) / 255.0f,
             ((id >> 8) & 0xFF) / 255.0f,
@@ -108,48 +148,64 @@ void Model::drawForPicking(Shader& shader)
 
 unsigned int TextureFromMemory(const aiTexture* tex)
 {
-    unsigned int textureID;
+    unsigned int textureID = 0;
     glGenTextures(1, &textureID);
 
-    int width, height, nrComponents;
+    int width = 0, height = 0, nrComponents = 0;
     unsigned char* data = nullptr;
 
     if (tex->mHeight == 0)
     {
-        // Сжатый формат (png/jpg внутри glb) — декодируем через stb
+        std::cout << "[TextureFromMemory] Compressed embedded texture" << std::endl;
+
         data = stbi_load_from_memory(
             reinterpret_cast<unsigned char*>(tex->pcData),
-            tex->mWidth, &width, &height, &nrComponents, 0);
+            tex->mWidth,
+            &width, &height, &nrComponents, 0
+        );
     }
     else
     {
-        // Несжатый RGBA8888
-        width = tex->mWidth;
-        height = tex->mHeight;
+        std::cout << "[TextureFromMemory] Raw embedded texture: "
+            << tex->mWidth << "x" << tex->mHeight << std::endl;
+
+        width = static_cast<int>(tex->mWidth);
+        height = static_cast<int>(tex->mHeight);
         nrComponents = 4;
         data = reinterpret_cast<unsigned char*>(tex->pcData);
     }
 
-    if (data)
+    if (!data)
     {
-        GLenum format = (nrComponents == 4) ? GL_RGBA :
-            (nrComponents == 3) ? GL_RGB : GL_RED;
-
-        glBindTexture(GL_TEXTURE_2D, textureID);
-        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
-
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-        if (tex->mHeight == 0) stbi_image_free(data); // только для сжатых форматов
+        std::cerr << "[TextureFromMemory] Embedded texture failed to load" << std::endl;
+        return 0;
     }
-    else
-    {
-        std::cerr << "Embedded texture failed to load" << std::endl;
-    }
+
+    GLenum format = GL_RED;
+    if (nrComponents == 4)
+        format = GL_RGBA;
+    else if (nrComponents == 3)
+        format = GL_RGB;
+    else if (nrComponents == 1)
+        format = GL_RED;
+
+    std::cout << "[TextureFromMemory] Loaded "
+        << width << "x" << height
+        << " | channels = " << nrComponents
+        << " | textureID = " << textureID
+        << std::endl;
+
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+    glGenerateMipmap(GL_TEXTURE_2D);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    if (tex->mHeight == 0)
+        stbi_image_free(data);
 
     return textureID;
 }
@@ -167,77 +223,83 @@ glm::mat4 Model::getModelMatrix() const
     return modelMat;
 }
 
-unsigned int TextureFromFile(const char* path, const std::string& directory, bool gamma = false)
+unsigned int TextureFromFile(const char* path, const std::string& directory, bool gamma)
 {
-    std::string filename = std::string(path);
-    filename = directory + '/' + filename;
+    std::string filename = directory + '/' + std::string(path);
 
-    unsigned int textureID;
+    unsigned int textureID = 0;
     glGenTextures(1, &textureID);
 
-    int width, height, nrComponents;
+    std::cout << "[TextureFromFile] Loading: " << filename << std::endl;
+
+    int width = 0, height = 0, nrComponents = 0;
     unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
-    if (data)
+
+    if (!data)
     {
-        GLenum format;
-        if (nrComponents == 1)
-            format = GL_RED;
-        else if (nrComponents == 3)
-            format = GL_RGB;
-        else if (nrComponents == 4)
-            format = GL_RGBA;
-        else
-        {
-            std::cerr << "Unknown number of channels: " << nrComponents << std::endl;
-            stbi_image_free(data);
-            return 0;
-        }
-
-        glBindTexture(GL_TEXTURE_2D, textureID);
-        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
-
-        // настройки фильтрации и обёртки
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-        stbi_image_free(data);
+        std::cerr << "[TextureFromFile] Failed to load texture: " << filename << std::endl;
+        return 0;
     }
+
+    GLenum format = GL_RED;
+    if (nrComponents == 1)
+        format = GL_RED;
+    else if (nrComponents == 3)
+        format = GL_RGB;
+    else if (nrComponents == 4)
+        format = GL_RGBA;
     else
     {
-        std::cerr << "Texture failed to load at path: " << filename << std::endl;
+        std::cerr << "[TextureFromFile] Unknown number of channels: " << nrComponents << std::endl;
         stbi_image_free(data);
         return 0;
     }
 
+    std::cout << "[TextureFromFile] Success: "
+        << width << "x" << height
+        << " | channels = " << nrComponents
+        << " | textureID = " << textureID
+        << std::endl;
+
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+    glGenerateMipmap(GL_TEXTURE_2D);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    stbi_image_free(data);
     return textureID;
 }
 
 void Model::processNode(aiNode* node, const aiScene* scene)
 {
+    std::cout << "[processNode] Node meshes: " << node->mNumMeshes
+        << " | children: " << node->mNumChildren
+        << std::endl;
+
     for (unsigned int i = 0; i < node->mNumMeshes; i++)
     {
-        aiMesh* aiMesh = scene->mMeshes[node->mMeshes[i]];
+        aiMesh* ai_mesh = scene->mMeshes[node->mMeshes[i]];
 
-        // создаём Mesh один раз
-        Mesh newMesh = processMesh(aiMesh, scene);
+        Mesh newMesh = processMesh(ai_mesh, scene);
         meshes.push_back(newMesh);
 
-        // сохраняем цвет для этого меша
-        glm::vec3 meshColor(1.0f); // по умолчанию белый
-        if (aiMesh->mMaterialIndex >= 0)
+        glm::vec3 meshColor(1.0f);
+        if (ai_mesh->mMaterialIndex >= 0)
         {
-            aiMaterial* material = scene->mMaterials[aiMesh->mMaterialIndex];
+            aiMaterial* material = scene->mMaterials[ai_mesh->mMaterialIndex];
             aiColor3D color(1.0f, 1.0f, 1.0f);
+
             if (material->Get(AI_MATKEY_COLOR_DIFFUSE, color) == AI_SUCCESS)
                 meshColor = glm::vec3(color.r, color.g, color.b);
         }
+
         meshColors.push_back(meshColor);
     }
 
-    // Рекурсивная обработка дочерних узлов
     for (unsigned int i = 0; i < node->mNumChildren; i++)
     {
         processNode(node->mChildren[i], scene);
@@ -250,22 +312,120 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene)
     std::vector<unsigned int> indices;
     std::vector<Texture> textures;
 
-    // Вершины
+    std::cout << "\n[processMesh] -----------------------------" << std::endl;
+    std::cout << "[processMesh] Vertices: " << mesh->mNumVertices
+        << " | Faces: " << mesh->mNumFaces
+        << " | Material index: " << mesh->mMaterialIndex
+        << std::endl;
+
+    unsigned int uvChannel = 0;
+
+    if (mesh->mMaterialIndex >= 0)
+    {
+        aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
+        aiString texPath;
+
+        if (material->GetTexture(aiTextureType_BASE_COLOR, 0, &texPath, nullptr, &uvChannel) == AI_SUCCESS)
+        {
+            std::cout << "[processMesh] BASE_COLOR uses UV channel: " << uvChannel << std::endl;
+        }
+        else if (material->GetTexture(aiTextureType_DIFFUSE, 0, &texPath, nullptr, &uvChannel) == AI_SUCCESS)
+        {
+            std::cout << "[processMesh] DIFFUSE uses UV channel: " << uvChannel << std::endl;
+        }
+        else
+        {
+            uvChannel = 0;
+        }
+    }
+
+    std::cout << "[processMesh] UV channels available: " << mesh->GetNumUVChannels() << std::endl;
+
+    bool hasUV =
+        (uvChannel < AI_MAX_NUMBER_OF_TEXTURECOORDS) &&
+        (mesh->mTextureCoords[uvChannel] != nullptr);
+
+    std::cout << "[processMesh] Using UV channel " << uvChannel
+        << " | available: " << (hasUV ? "YES" : "NO") << std::endl;
+
+    float minU = FLT_MAX, minV = FLT_MAX;
+    float maxU = -FLT_MAX, maxV = -FLT_MAX;
+
     for (unsigned int i = 0; i < mesh->mNumVertices; i++)
     {
-        Vertex vertex;
-        vertex.Position = { mesh->mVertices[i].x, mesh->mVertices[i].y, mesh->mVertices[i].z };
-        vertex.Normal = { mesh->mNormals[i].x, mesh->mNormals[i].y, mesh->mNormals[i].z };
+        Vertex vertex{};
 
-        if (mesh->mTextureCoords[0])
-            vertex.TexCoords = { mesh->mTextureCoords[0][i].x, mesh->mTextureCoords[0][i].y };
+        vertex.Position = {
+            mesh->mVertices[i].x,
+            mesh->mVertices[i].y,
+            mesh->mVertices[i].z
+        };
+
+        if (mesh->HasNormals())
+        {
+            vertex.Normal = {
+                mesh->mNormals[i].x,
+                mesh->mNormals[i].y,
+                mesh->mNormals[i].z
+            };
+        }
+
+        if (hasUV)
+        {
+            vertex.TexCoords = {
+                mesh->mTextureCoords[uvChannel][i].x,
+                mesh->mTextureCoords[uvChannel][i].y
+            };
+
+            minU = std::min(minU, vertex.TexCoords.x);
+            minV = std::min(minV, vertex.TexCoords.y);
+            maxU = std::max(maxU, vertex.TexCoords.x);
+            maxV = std::max(maxV, vertex.TexCoords.y);
+
+            if (i < 5)
+            {
+                std::cout << "[processMesh] UV[" << i << "] = ("
+                    << vertex.TexCoords.x << ", "
+                    << vertex.TexCoords.y << ")"
+                    << std::endl;
+            }
+        }
         else
+        {
             vertex.TexCoords = { 0.0f, 0.0f };
+        }
+
+        if (mesh->HasTangentsAndBitangents())
+        {
+            vertex.Tangent = {
+                mesh->mTangents[i].x,
+                mesh->mTangents[i].y,
+                mesh->mTangents[i].z
+            };
+            vertex.Bitangent = {
+                mesh->mBitangents[i].x,
+                mesh->mBitangents[i].y,
+                mesh->mBitangents[i].z
+            };
+        }
+
+        for (int j = 0; j < MAX_BONE_INFLUENCE; ++j)
+        {
+            vertex.m_BoneIDs[j] = 0;
+            vertex.m_Weights[j] = 0.0f;
+        }
 
         vertices.push_back(vertex);
     }
 
-    // Индексы
+    if (hasUV)
+    {
+        std::cout << "[processMesh] UV range: "
+            << "U(" << minU << " .. " << maxU << "), "
+            << "V(" << minV << " .. " << maxV << ")"
+            << std::endl;
+    }
+
     for (unsigned int i = 0; i < mesh->mNumFaces; i++)
     {
         aiFace face = mesh->mFaces[i];
@@ -273,18 +433,35 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene)
             indices.push_back(face.mIndices[j]);
     }
 
-    // Материалы
     if (mesh->mMaterialIndex >= 0)
     {
         aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
-        aiColor3D color;
 
-        std::vector<Texture> diffuseMaps = loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");
-        textures.insert(textures.end(), diffuseMaps.begin(), diffuseMaps.end());
+        std::cout << "[processMesh] Diffuse count  = "
+            << material->GetTextureCount(aiTextureType_DIFFUSE) << std::endl;
+        std::cout << "[processMesh] Specular count = "
+            << material->GetTextureCount(aiTextureType_SPECULAR) << std::endl;
+        std::cout << "[processMesh] BaseColor count = "
+            << material->GetTextureCount(aiTextureType_BASE_COLOR) << std::endl;
 
-        std::vector<Texture> specularMaps = loadMaterialTextures(material, aiTextureType_SPECULAR, "texture_specular");
+        std::vector<Texture> baseColorMaps =
+            loadMaterialTextures(material, aiTextureType_BASE_COLOR, "texture_diffuse");
+
+        if (baseColorMaps.empty())
+        {
+            baseColorMaps =
+                loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");
+        }
+
+        textures.insert(textures.end(), baseColorMaps.begin(), baseColorMaps.end());
+
+        std::vector<Texture> specularMaps =
+            loadMaterialTextures(material, aiTextureType_SPECULAR, "texture_specular");
         textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
     }
+
+    std::cout << "[processMesh] Final texture count in mesh = "
+        << textures.size() << std::endl;
 
     return Mesh(vertices, indices, textures);
 }
@@ -293,48 +470,84 @@ std::vector<Texture> Model::loadMaterialTextures(aiMaterial* mat, aiTextureType 
 {
     std::vector<Texture> textures;
 
-    for (unsigned int i = 0; i < mat->GetTextureCount(type); i++)
+    unsigned int count = mat->GetTextureCount(type);
+    std::cout << "[loadMaterialTextures] type = " << typeName
+        << " | count = " << count
+        << std::endl;
+
+    for (unsigned int i = 0; i < count; i++)
     {
         aiString str;
         mat->GetTexture(type, i, &str);
 
+        std::cout << "[loadMaterialTextures] Requested "
+            << typeName << " | path = " << str.C_Str()
+            << std::endl;
+
+        if (str.length == 0)
+        {
+            std::cout << "[loadMaterialTextures] Skip empty texture path" << std::endl;
+            continue;
+        }
+
         bool skip = false;
         for (unsigned int j = 0; j < textures_loaded.size(); j++)
         {
-            if (textures_loaded[j].path == str.C_Str())
+            if (textures_loaded[j].path == str.C_Str() &&
+                textures_loaded[j].type == typeName)
             {
+                std::cout << "[loadMaterialTextures] Reusing already loaded texture: "
+                    << str.C_Str() << std::endl;
+
                 textures.push_back(textures_loaded[j]);
                 skip = true;
                 break;
             }
         }
 
-        if (!skip)
+        if (skip)
+            continue;
+
+        Texture texture;
+        texture.type = typeName;
+        texture.path = str.C_Str();
+        texture.id = 0;
+
+        if (str.C_Str()[0] == '*')
         {
-            Texture texture;
-            texture.type = typeName;
-            texture.path = str.C_Str();
+            int texIndex = std::atoi(str.C_Str() + 1);
 
-            // Если путь начинается с '*' — embedded-текстура внутри GLB
-            if (str.length > 0 && str.C_Str()[0] == '*')
-            {
-                int texIndex = std::atoi(str.C_Str() + 1); // индекс после '*'
-                if (scene && texIndex < (int)scene->mNumTextures)
-                    texture.id = TextureFromMemory(scene->mTextures[texIndex]);
-                else
-                {
-                    std::cerr << "Invalid embedded texture index: " << texIndex << std::endl;
-                    texture.id = 0;
-                }
-            }
+            std::cout << "[loadMaterialTextures] Embedded texture index = "
+                << texIndex << std::endl;
+
+            if (scene && texIndex < static_cast<int>(scene->mNumTextures))
+                texture.id = TextureFromMemory(scene->mTextures[texIndex]);
             else
-            {
-                texture.id = TextureFromFile(str.C_Str(), directory, false);
-            }
-
-            textures.push_back(texture);
-            textures_loaded.push_back(texture);
+                std::cerr << "[loadMaterialTextures] Invalid embedded texture index: "
+                << texIndex << std::endl;
         }
+        else
+        {
+            texture.id = TextureFromFile(str.C_Str(), directory, false);
+        }
+
+        if (texture.id == 0)
+        {
+            std::cout << "[loadMaterialTextures] Skip invalid texture"
+                << " | type = " << texture.type
+                << " | path = " << texture.path
+                << std::endl;
+            continue;
+        }
+
+        std::cout << "[loadMaterialTextures] Loaded result"
+            << " | id = " << texture.id
+            << " | type = " << texture.type
+            << " | path = " << texture.path
+            << std::endl;
+
+        textures.push_back(texture);
+        textures_loaded.push_back(texture);
     }
 
     return textures;
@@ -345,17 +558,14 @@ void Model::setRotationMatrix(const glm::mat4& rot)
     rotationMatrix = rot;
 }
 
-// Выбор меша
-
 void Model::selectMesh(int index)
 {
-    if (index < 0 || index >= (int)meshes.size())
+    if (index < 0 || index >= static_cast<int>(meshes.size()))
     {
         selectedMeshIndex = -1;
         return;
     }
 
-    // Выбор конкретного меша
     selectedMeshIndex = index;
 }
 
@@ -367,21 +577,23 @@ void Model::showAllMeshes()
 
 void Model::isolateSelectedMesh()
 {
-    if (selectedMeshIndex < 0 || selectedMeshIndex >= (int)meshVisible.size())
+    if (selectedMeshIndex < 0 || selectedMeshIndex >= static_cast<int>(meshVisible.size()))
     {
         showAllMeshes();
         return;
     }
 
     for (size_t i = 0; i < meshVisible.size(); ++i)
-        meshVisible[i] = ((int)i == selectedMeshIndex);
+        meshVisible[i] = (static_cast<int>(i) == selectedMeshIndex);
 }
 
-int Model::getSelectedMesh() const {
+int Model::getSelectedMesh() const
+{
     return selectedMeshIndex;
 }
 
-Mesh& Model::getMesh(int index) {
+Mesh& Model::getMesh(int index)
+{
     return meshes[index];
 }
 
