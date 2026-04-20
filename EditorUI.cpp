@@ -1,9 +1,11 @@
-#include "EditorUI.h"
+п»ї#include "EditorUI.h"
 
 #include "imgui_impl_opengl3.h"
 #include "imgui_impl_glfw.h"
 
-// Глобальные параметры света из Main.cpp
+#include <cstring>
+
+// Р“Р»РѕР±Р°Р»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ СЃРІРµС‚Р° РёР· Main.cpp
 extern glm::vec3 lightPos1;
 extern glm::vec3 lightColor1;
 extern glm::vec3 lightPos2;
@@ -12,85 +14,149 @@ extern glm::vec3 lightColor2;
 extern float lightIntensity1;
 extern float lightIntensity2;
 
-// Начало нового кадра ImGui — нужно вызывать каждый рендер-цикл
+// РќР°С‡Р°Р»Рѕ РЅРѕРІРѕРіРѕ РєР°РґСЂР° ImGui вЂ” РЅСѓР¶РЅРѕ РІС‹Р·С‹РІР°С‚СЊ РєР°Р¶РґС‹Р№ СЂРµРЅРґРµСЂ-С†РёРєР»
 void EditorUI::beginFrame()
 {
-	ImGui_ImplOpenGL3_NewFrame(); // подготавливаем OpenGL3 бэкенд
-	ImGui_ImplGlfw_NewFrame(); // подготавливаем GLFW бэкенд
-	ImGui::NewFrame(); // создаем новый кадр ImGui
+	ImGui_ImplOpenGL3_NewFrame(); // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј OpenGL3 Р±СЌРєРµРЅРґ
+	ImGui_ImplGlfw_NewFrame(); // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј GLFW Р±СЌРєРµРЅРґ
+	ImGui::NewFrame(); // СЃРѕР·РґР°РµРј РЅРѕРІС‹Р№ РєР°РґСЂ ImGui
 }
 
-// Отрисовка UI и вывод на экран
+// РћС‚СЂРёСЃРѕРІРєР° UI Рё РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ
 void EditorUI::render(Model* model, bool& isolateSelectedMesh)
 {
-    drawModelWindow(); // новое окно загрузки модели
+    drawModelWindow(); // РЅРѕРІРѕРµ РѕРєРЅРѕ Р·Р°РіСЂСѓР·РєРё РјРѕРґРµР»Рё
 
     if (model)
     {
         int selected = model->getSelectedMesh();
-        if (selected != -1) // если есть выбранный меш
+        if (selected != -1)
         {
-            std::string selectedInfo = model->getMeshInfo(selected);
+            std::string selectedInfo = model->getMeshNote(selected);
+
+            static int lastSelectedMesh = -1;
+            static char noteBuffer[2048] = "";
+            static bool noteEditorOpen = false;
+
+            if (selected != lastSelectedMesh)
+            {
+                std::string note = model->getMeshNote(selected);
+                strncpy_s(noteBuffer, sizeof(noteBuffer), note.c_str(), _TRUNCATE);
+
+                noteEditorOpen = !note.empty();
+                lastSelectedMesh = selected;
+            }
 
             ImGuiIO& io = ImGui::GetIO();
-            ImVec2 infoPos(io.DisplaySize.x - 300, 10); // справа, 300 пикселей от края
+            ImVec2 infoPos(io.DisplaySize.x - 360, 10);
             ImGui::SetNextWindowPos(infoPos, ImGuiCond_Always);
-            ImGui::SetNextWindowSize(ImVec2(280, 150)); // ширина окна
+            ImGui::SetNextWindowSize(ImVec2(340, 300));
 
-            ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar |
-                                     ImGuiWindowFlags_NoResize |
-                                     ImGuiWindowFlags_NoMove |
-                                     ImGuiWindowFlags_NoScrollbar |
-                                     ImGuiWindowFlags_NoCollapse;
+            ImGuiWindowFlags flags =
+                ImGuiWindowFlags_NoResize |
+                ImGuiWindowFlags_NoMove |
+                ImGuiWindowFlags_NoCollapse;
 
-            ImGui::Begin("Mesh Info", nullptr, flags);
+            ImGui::Begin(u8"Р—Р°РјРµС‚РєРё РѕР± СЌР»РµРјРµРЅС‚Рµ", nullptr, flags);
+
+            ImGui::Text(u8"Р’С‹Р±СЂР°РЅРЅС‹Р№ СЌР»РµРјРµРЅС‚:");
+            ImGui::Separator();
+
             ImGui::TextWrapped("%s", selectedInfo.c_str());
+
+            ImGui::Spacing();
+            ImGui::Separator();
+            ImGui::Spacing();
+
+            ImGui::Text(u8"РњРѕСЏ Р·Р°РјРµС‚РєР°:");
+
+            if (!noteEditorOpen)
+            {
+                ImGui::Spacing();
+                ImGui::TextDisabled(u8"Р”Р»СЏ СЌС‚РѕРіРѕ СЌР»РµРјРµРЅС‚Р° Р·Р°РјРµС‚РєР° РµС‰Рµ РЅРµ СЃРѕР·РґР°РЅР°.");
+                ImGui::Spacing();
+
+                if (ImGui::Button(u8"Р”РѕР±Р°РІРёС‚СЊ Р·Р°РјРµС‚РєСѓ", ImVec2(180, 32)))
+                {
+                    noteEditorOpen = true;
+                    noteBuffer[0] = '\0';
+                }
+            }
+            else
+            {
+                if (ImGui::InputTextMultiline(
+                    "##MeshNote",
+                    noteBuffer,
+                    sizeof(noteBuffer),
+                    ImVec2(-1.0f, 130.0f)))
+                {
+                    model->setMeshNote(selected, std::string(noteBuffer));
+                }
+
+                ImGui::Spacing();
+
+                if (ImGui::Button(u8"РЎРѕС…СЂР°РЅРёС‚СЊ", ImVec2(100, 28)))
+                {
+                    model->setMeshNote(selected, std::string(noteBuffer));
+                    model->saveNotes(model->getNotesFilePath());
+                    noteEditorOpen = false;
+                }
+
+                ImGui::SameLine();
+
+                if (ImGui::Button(u8"РћС‡РёСЃС‚РёС‚СЊ", ImVec2(100, 28)))
+                {
+                    noteBuffer[0] = '\0';
+                    model->setMeshNote(selected, "");
+                }
+            }
+
             ImGui::End();
         }
     }
 
-    // Окно управления светом
-    ImVec2 windowlightSize(320.0f, 0.0f); // нормальная ширина
+    // РћРєРЅРѕ СѓРїСЂР°РІР»РµРЅРёСЏ СЃРІРµС‚РѕРј
+    ImVec2 windowlightSize(320.0f, 0.0f); // РЅРѕСЂРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°
     ImVec2 windowlightPos(
         ImGui::GetIO().DisplaySize.x - windowlightSize.x - 10.0f,
         ImGui::GetIO().DisplaySize.y - 10.0f
     );
 
-    ImGui::SetNextWindowPos(windowlightPos, ImGuiCond_Always, ImVec2(0.0f, 1.0f)); // якорь снизу
+    ImGui::SetNextWindowPos(windowlightPos, ImGuiCond_Always, ImVec2(0.0f, 1.0f)); // СЏРєРѕСЂСЊ СЃРЅРёР·Сѓ
     ImGui::SetNextWindowSize(windowlightSize, ImGuiCond_Always);
 
     ImGui::Begin(
-        "Lighting",
+        u8"РЎРІРµС‚",
         nullptr,
         ImGuiWindowFlags_NoMove |
         ImGuiWindowFlags_NoResize |
         ImGuiWindowFlags_AlwaysAutoResize
     );
 
-    ImGui::Text("Main Light");
-    ImGui::DragFloat3("Position 1", &lightPos1[0], 0.1f, -20.0f, 20.0f);
-    ImGui::ColorEdit3("Color 1", &lightColor1[0]);
-    ImGui::DragFloat("Intensity 1", &lightIntensity1, 0.05f, 0.0f, 5.0f);
+    ImGui::Text(u8"РћСЃРЅРѕРІРЅРѕР№ СЃРІРµС‚");
+    ImGui::DragFloat3(u8"РџРѕР·РёС†РёСЏ 1", &lightPos1[0], 0.1f, -20.0f, 20.0f);
+    ImGui::ColorEdit3(u8"Р¦РІРµС‚ 1", &lightColor1[0]);
+    ImGui::DragFloat(u8"РРЅС‚РµРЅСЃРёРІРЅРѕСЃС‚СЊ 1", &lightIntensity1, 0.05f, 0.0f, 5.0f);
 
     ImGui::Separator();
 
-    ImGui::Text("Fill Light");
-    ImGui::DragFloat3("Position 2", &lightPos2[0], 0.1f, -20.0f, 20.0f);
-    ImGui::ColorEdit3("Color 2", &lightColor2[0]);
-    ImGui::DragFloat("Intensity 2", &lightIntensity2, 0.05f, 0.0f, 5.0f);
+    ImGui::Text(u8"Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ СЃРІРµС‚");
+    ImGui::DragFloat3(u8"РџРѕР·РёС†РёСЏ 2", &lightPos2[0], 0.1f, -20.0f, 20.0f);
+    ImGui::ColorEdit3(u8"Р¦РІРµС‚ 2", &lightColor2[0]);
+    ImGui::DragFloat(u8"РРЅС‚РµРЅСЃРёРІРЅРѕСЃС‚СЊ 2", &lightIntensity2, 0.05f, 0.0f, 5.0f);
 
     ImGui::End();
 
-    // Окно дополнительных функций
+    // РћРєРЅРѕ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… С„СѓРЅРєС†РёР№
     ImVec2 windowPos(10.0f, ImGui::GetIO().DisplaySize.y - 10.0f);
     ImGui::SetNextWindowPos(windowPos, ImGuiCond_Always, ImVec2(0.0f, 1.0f));
 
-    ImGui::Begin("Additional functions:", nullptr,
+    ImGui::Begin(u8"Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С„СѓРЅРєС†РёРё:", nullptr,
         ImGuiWindowFlags_NoResize |
         ImGuiWindowFlags_NoMove |
         ImGuiWindowFlags_AlwaysAutoResize);
     
-    if (ImGui::Button("Show All Meshes"))
+    if (ImGui::Button(u8"РџРѕРєР°Р·Р°С‚СЊ РІСЃРµ СЌР»РµРјРµРЅС‚С‹"))
     {
         if (model)
         {
@@ -100,7 +166,7 @@ void EditorUI::render(Model* model, bool& isolateSelectedMesh)
         }
     }
 
-    if (ImGui::Checkbox("Isolate selected mesh", &isolateSelectedMesh))
+    if (ImGui::Checkbox(u8"РЎРєСЂС‹С‚СЊ СЌР»РµРјРµРЅС‚С‹", &isolateSelectedMesh))
     {
         if (model)
         {
@@ -113,23 +179,23 @@ void EditorUI::render(Model* model, bool& isolateSelectedMesh)
 
     if (!isolateSelectedMesh)
     {
-        ImGui::TextDisabled("Click selects a mesh without hiding the others.");
+        ImGui::TextDisabled(u8"РџРѕСЃС‚Р°РІСЊС‚Рµ РіР°Р»РѕС‡РєСѓ, С‡С‚РѕР±С‹ РІРєР»СЋС‡РёС‚СЊ СЂРµР¶РёРј СЂР°Р·РґРµР»РµРЅРёСЏ");
     }
 
     else if (model && model->getSelectedMesh() < 0)
     {
-        ImGui::TextDisabled("Select a mesh by clicking on the model.");
+        ImGui::TextDisabled(u8"РќР°Р¶РјРёС‚Рµ РЅР° СЌР»РµРјРµРЅС‚ РјРѕРґРµР»Рё.");
     }
 
     ImGui::End();
 
-    ImGui::Render(); // подготавливаем отрисовку
-    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData()); // отрисовываем через OpenGL
+    ImGui::Render(); // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј РѕС‚СЂРёСЃРѕРІРєСѓ
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData()); // РѕС‚СЂРёСЃРѕРІС‹РІР°РµРј С‡РµСЂРµР· OpenGL
 }
 
 void EditorUI::drawModelWindow()
 {
-    // Применяем позицию для второго окна
+    // РџСЂРёРјРµРЅСЏРµРј РїРѕР·РёС†РёСЋ РґР»СЏ РІС‚РѕСЂРѕРіРѕ РѕРєРЅР°
     ImGui::SetNextWindowPos(ImVec2(10.0f, 10.0f), ImGuiCond_Always);
 
     ImGui::Begin(

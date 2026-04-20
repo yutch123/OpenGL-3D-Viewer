@@ -44,7 +44,12 @@ class Model
 
 		size_t getMeshCount() const;
 
-		std::string getMeshInfo(int index) const { return meshes[index].getInfo(); }
+		std::string& getMeshNote(int index);
+		void setMeshNote(int index, const std::string& note);
+
+		void saveNotes(const std::string& path) const;
+		void loadNotes(const std::string& path);
+		std::string getNotesFilePath() const;
 
 	private:
 
@@ -60,6 +65,9 @@ class Model
 
 		std::vector<glm::vec3> meshColors;
 		std::vector<bool> meshVisible; // какие меши видимы
+
+		std::vector<std::string> meshNotes;
+
 		std::string directory;
 		std::vector<Texture> textures_loaded;
 

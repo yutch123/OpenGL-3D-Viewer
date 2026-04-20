@@ -6,6 +6,8 @@
 #include <cfloat>
 #include <algorithm>
 #include <stb_image.h>
+#include <fstream>
+#include <sstream>
 
 namespace
 {
@@ -104,10 +106,14 @@ void Model::loadModel(const std::string& path)
     meshColors.clear();
     textures_loaded.clear();
     meshVisible.clear();
+    meshNotes.clear();
 
     processNode(scene->mRootNode, scene);
 
     meshVisible.resize(meshes.size(), true);
+    meshNotes.resize(meshes.size(), ""); // создаем пустую заметку для каждого меша
+
+    loadNotes(getNotesFilePath());
 
     for (size_t i = 0; i < meshes.size(); ++i)
     {
@@ -117,9 +123,86 @@ void Model::loadModel(const std::string& path)
     std::cout << "[loadModel] Total meshes loaded: " << meshes.size() << std::endl;
 }
 
+std::string Model::getNotesFilePath() const
+{
+    return directory + "/mesh_notes.txt";
+}
+
+void Model::saveNotes(const std::string& path) const
+{
+    std::ofstream file(path, std::ios::out | std::ios::trunc);
+    if (!file.is_open())
+        return;
+
+    for (size_t i = 0; i < meshNotes.size(); ++i)
+    {
+        file << i << '\n';
+        file << meshNotes[i] << '\n';
+        file << "---NOTE_END---" << '\n';
+    }
+}
+
+void Model::loadNotes(const std::string& path)
+{
+    std::ifstream file(path);
+    if (!file.is_open())
+        return;
+
+    std::vector<std::string> loadedNotes(meshNotes.size(), "");
+
+    std::string line;
+    while (std::getline(file, line))
+    {
+        if (line.empty())
+            continue;
+
+        int index = -1;
+        try
+        {
+            index = std::stoi(line);
+        }
+        catch (...)
+        {
+            continue;
+        }
+
+        if (index < 0 || index >= static_cast<int>(loadedNotes.size()))
+            continue;
+
+        std::ostringstream noteStream;
+        while (std::getline(file, line))
+        {
+            if (line == "---NOTE_END---")
+                break;
+
+            if (!noteStream.str().empty())
+                noteStream << '\n';
+
+            noteStream << line;
+        }
+
+        loadedNotes[index] = noteStream.str();
+    }
+
+    meshNotes = loadedNotes;
+}
+
 size_t Model::getMeshCount() const
 {
     return meshes.size();
+}
+
+std::string& Model::getMeshNote(int index)
+{
+    return meshNotes[index];
+}
+
+void Model::setMeshNote(int index, const std::string& note)
+{
+    if (index < 0 || index >= static_cast<int>(meshNotes.size()))
+        return;
+
+    meshNotes[index] = note;
 }
 
 void Model::drawForPicking(Shader& shader)
