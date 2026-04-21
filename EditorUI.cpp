@@ -30,89 +30,103 @@ void EditorUI::render(Model* model, bool& isolateSelectedMesh)
     if (model)
     {
         int selected = model->getSelectedMesh();
-        if (selected != -1)
+
+        static int lastSelectedMesh = -1;
+        static char noteBuffer[2048] = "";
+        static bool noteEditorOpen = false;
+        static bool notesCollapsed = false;
+
+        if (selected != -1 && selected != lastSelectedMesh)
         {
-            std::string selectedInfo = model->getMeshNote(selected);
+            std::string note = model->getMeshNote(selected);
+            strncpy_s(noteBuffer, sizeof(noteBuffer), note.c_str(), _TRUNCATE);
 
-            static int lastSelectedMesh = -1;
-            static char noteBuffer[2048] = "";
-            static bool noteEditorOpen = false;
+            noteEditorOpen = !note.empty();
+            lastSelectedMesh = selected;
+        }
 
-            if (selected != lastSelectedMesh)
-            {
-                std::string note = model->getMeshNote(selected);
-                strncpy_s(noteBuffer, sizeof(noteBuffer), note.c_str(), _TRUNCATE);
+        ImGuiIO& io = ImGui::GetIO();
+        ImVec2 infoPos(io.DisplaySize.x - 360, 10);
+        ImGui::SetNextWindowPos(infoPos, ImGuiCond_Always);
+        ImGui::SetNextWindowSize(ImVec2(340, notesCollapsed ? 85 : 300), ImGuiCond_Always);
 
-                noteEditorOpen = !note.empty();
-                lastSelectedMesh = selected;
-            }
+        ImGuiWindowFlags flags =
+            ImGuiWindowFlags_NoResize |
+            ImGuiWindowFlags_NoMove |
+            ImGuiWindowFlags_NoCollapse;
 
-            ImGuiIO& io = ImGui::GetIO();
-            ImVec2 infoPos(io.DisplaySize.x - 360, 10);
-            ImGui::SetNextWindowPos(infoPos, ImGuiCond_Always);
-            ImGui::SetNextWindowSize(ImVec2(340, 300));
+        ImGui::Begin(u8"Заметки об элементе", nullptr, flags);
 
-            ImGuiWindowFlags flags =
-                ImGuiWindowFlags_NoResize |
-                ImGuiWindowFlags_NoMove |
-                ImGuiWindowFlags_NoCollapse;
+        if (ImGui::Button(notesCollapsed ? u8"Развернуть" : u8"Свернуть", ImVec2(120, 28)))
+        {
+            notesCollapsed = !notesCollapsed;
+        }
 
-            ImGui::Begin(u8"Заметки об элементе", nullptr, flags);
-
+        if (!notesCollapsed)
+        {
+            ImGui::Spacing();
             ImGui::Text(u8"Выбранный элемент:");
             ImGui::Separator();
 
-            ImGui::TextWrapped("%s", selectedInfo.c_str());
-
-            ImGui::Spacing();
-            ImGui::Separator();
-            ImGui::Spacing();
-
-            ImGui::Text(u8"Моя заметка:");
-
-            if (!noteEditorOpen)
+            if (selected == -1)
             {
-                ImGui::Spacing();
-                ImGui::TextDisabled(u8"Для этого элемента заметка еще не создана.");
-                ImGui::Spacing();
-
-                if (ImGui::Button(u8"Добавить заметку", ImVec2(180, 32)))
-                {
-                    noteEditorOpen = true;
-                    noteBuffer[0] = '\0';
-                }
+                ImGui::TextDisabled(u8"Элемент не выбран.");
             }
             else
             {
-                if (ImGui::InputTextMultiline(
-                    "##MeshNote",
-                    noteBuffer,
-                    sizeof(noteBuffer),
-                    ImVec2(-1.0f, 130.0f)))
-                {
-                    model->setMeshNote(selected, std::string(noteBuffer));
-                }
+                std::string selectedInfo = model->getMesh(selected).getInfo();
+                ImGui::TextWrapped("%s", selectedInfo.c_str());
 
                 ImGui::Spacing();
+                ImGui::Separator();
+                ImGui::Spacing();
 
-                if (ImGui::Button(u8"Сохранить", ImVec2(100, 28)))
+                ImGui::Text(u8"Моя заметка:");
+
+                if (!noteEditorOpen)
                 {
-                    model->setMeshNote(selected, std::string(noteBuffer));
-                    model->saveNotes(model->getNotesFilePath());
-                    noteEditorOpen = false;
+                    ImGui::Spacing();
+                    ImGui::TextDisabled(u8"Для этого элемента заметка еще не создана.");
+                    ImGui::Spacing();
+
+                    if (ImGui::Button(u8"Добавить заметку", ImVec2(180, 32)))
+                    {
+                        noteEditorOpen = true;
+                        noteBuffer[0] = '\0';
+                    }
                 }
-
-                ImGui::SameLine();
-
-                if (ImGui::Button(u8"Очистить", ImVec2(100, 28)))
+                else
                 {
-                    noteBuffer[0] = '\0';
-                    model->setMeshNote(selected, "");
+                    if (ImGui::InputTextMultiline(
+                        "##MeshNote",
+                        noteBuffer,
+                        sizeof(noteBuffer),
+                        ImVec2(-1.0f, 130.0f)))
+                    {
+                        model->setMeshNote(selected, std::string(noteBuffer));
+                    }
+
+                    ImGui::Spacing();
+
+                    if (ImGui::Button(u8"Сохранить", ImVec2(100, 28)))
+                    {
+                        model->setMeshNote(selected, std::string(noteBuffer));
+                        model->saveNotes(model->getNotesFilePath());
+                        noteEditorOpen = false;
+                    }
+
+                    ImGui::SameLine();
+
+                    if (ImGui::Button(u8"Очистить", ImVec2(100, 28)))
+                    {
+                        noteBuffer[0] = '\0';
+                        model->setMeshNote(selected, "");
+                    }
                 }
             }
-
-            ImGui::End();
         }
+
+        ImGui::End();
     }
 
     // Окно управления светом
@@ -199,14 +213,14 @@ void EditorUI::drawModelWindow()
     ImGui::SetNextWindowPos(ImVec2(10.0f, 10.0f), ImGuiCond_Always);
 
     ImGui::Begin(
-        "Model Loader",
+        u8"Загрузить модель",
         nullptr,
         ImGuiWindowFlags_NoMove |
         ImGuiWindowFlags_NoResize |
         ImGuiWindowFlags_AlwaysAutoResize
     );
 
-    if (ImGui::Button("3D_Model", ImVec2(120, 40)))
+    if (ImGui::Button(u8"Открыть модель", ImVec2(120, 40)))
         loadModelRequested = true;
 
     ImGui::End();

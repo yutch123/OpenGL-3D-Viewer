@@ -46,7 +46,7 @@
 // Backend ImGui для OpenGL (рендеринг UI)
 #include "imgui_impl_opengl3.h"
 // Конфигурация ImGui (опциональные настройки, макросы)
-#include "imconfig.h"
+ #include "imconfig.h"
 
 // =======================
 // Внутренние модули проекта

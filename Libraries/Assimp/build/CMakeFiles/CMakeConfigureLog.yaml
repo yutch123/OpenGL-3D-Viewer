@@ -1,0 +1,2074 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:88 (find_program)"
+    mode: "program"
+    variable: "CCACHE_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ccache"
+    candidate_directories:
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Microsoft MPI/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Huawei/yandex-cloud/bin/"
+      - "C:/Users/Huawei/.dotnet/tools/"
+      - "C:/tools/dart-sdk/bin/"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/PATH%/"
+      - "C:/Program Files/Vim/vim91/vim.exe/"
+      - "C:/tools/neovim/nvim-win64/bin/"
+    searched_directories:
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/ccache.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/ccache.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/ccache"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/ccache.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/ccache.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/ccache"
+      - "C:/Program Files/Razer Chroma SDK/bin/ccache.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/ccache.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/ccache"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/ccache.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/ccache.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/ccache"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/ccache.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/ccache.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/ccache"
+      - "C:/Program Files/Microsoft MPI/Bin/ccache.com"
+      - "C:/Program Files/Microsoft MPI/Bin/ccache.exe"
+      - "C:/Program Files/Microsoft MPI/Bin/ccache"
+      - "C:/Windows/System32/ccache.com"
+      - "C:/Windows/System32/ccache.exe"
+      - "C:/Windows/System32/ccache"
+      - "C:/Windows/ccache.com"
+      - "C:/Windows/ccache.exe"
+      - "C:/Windows/ccache"
+      - "C:/Windows/System32/wbem/ccache.com"
+      - "C:/Windows/System32/wbem/ccache.exe"
+      - "C:/Windows/System32/wbem/ccache"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache"
+      - "C:/Windows/System32/OpenSSH/ccache.com"
+      - "C:/Windows/System32/OpenSSH/ccache.exe"
+      - "C:/Windows/System32/OpenSSH/ccache"
+      - "C:/Program Files/Amazon/AWSCLIV2/ccache.com"
+      - "C:/Program Files/Amazon/AWSCLIV2/ccache.exe"
+      - "C:/Program Files/Amazon/AWSCLIV2/ccache"
+      - "C:/ProgramData/chocolatey/bin/ccache.com"
+      - "C:/ProgramData/chocolatey/bin/ccache.exe"
+      - "C:/ProgramData/chocolatey/bin/ccache"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/ccache.com"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/ccache.exe"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/ccache"
+      - "C:/Users/Huawei/yandex-cloud/bin/ccache.com"
+      - "C:/Users/Huawei/yandex-cloud/bin/ccache.exe"
+      - "C:/Users/Huawei/yandex-cloud/bin/ccache"
+      - "C:/Users/Huawei/.dotnet/tools/ccache.com"
+      - "C:/Users/Huawei/.dotnet/tools/ccache.exe"
+      - "C:/Users/Huawei/.dotnet/tools/ccache"
+      - "C:/tools/dart-sdk/bin/ccache.com"
+      - "C:/tools/dart-sdk/bin/ccache.exe"
+      - "C:/tools/dart-sdk/bin/ccache"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/ccache.com"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/ccache.exe"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/ccache"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/ccache.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/ccache.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/ccache"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/ccache.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/ccache.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/ccache"
+      - "C:/Program Files/nodejs/ccache.com"
+      - "C:/Program Files/nodejs/ccache.exe"
+      - "C:/Program Files/nodejs/ccache"
+      - "C:/Program Files/Docker/Docker/resources/bin/ccache.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/ccache.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/ccache"
+      - "C:/Program Files/dotnet/ccache.com"
+      - "C:/Program Files/dotnet/ccache.exe"
+      - "C:/Program Files/dotnet/ccache"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/ccache.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/ccache.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/ccache"
+      - "C:/Program Files (x86)/Bitvise SSH Client/ccache.com"
+      - "C:/Program Files (x86)/Bitvise SSH Client/ccache.exe"
+      - "C:/Program Files (x86)/Bitvise SSH Client/ccache"
+      - "C:/Program Files/Git/cmd/ccache.com"
+      - "C:/Program Files/Git/cmd/ccache.exe"
+      - "C:/Program Files/Git/cmd/ccache"
+      - "C:/Program Files/CMake/bin/ccache.com"
+      - "C:/Program Files/CMake/bin/ccache.exe"
+      - "C:/Program Files/CMake/bin/ccache"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/ccache.com"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/ccache.exe"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/ccache"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/ccache.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/ccache.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/ccache"
+      - "C:/Program Files/CMake/bin/PATH%/ccache.com"
+      - "C:/Program Files/CMake/bin/PATH%/ccache.exe"
+      - "C:/Program Files/CMake/bin/PATH%/ccache"
+      - "C:/Program Files/Vim/vim91/vim.exe/ccache.com"
+      - "C:/Program Files/Vim/vim91/vim.exe/ccache.exe"
+      - "C:/Program Files/Vim/vim91/vim.exe/ccache"
+      - "C:/tools/neovim/nvim-win64/bin/ccache.com"
+      - "C:/tools/neovim/nvim-win64/bin/ccache.exe"
+      - "C:/tools/neovim/nvim-win64/bin/ccache"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+      (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+      
+      ‘Ў®аЄ  ­ з в  05.01.2026 20:04:17.
+      Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\4.2.1\\CompilerIdC\\CompilerIdC.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+      PrepareForBuild:
+        ‘®§¤ ­ЁҐ Є в «®Ј  "Debug\\".
+        ‘®§¤ ­ЁҐ Є в «®Ј  "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        ‘®§¤ ­ЁҐ "Debug\\CompilerIdC.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\4.2.1\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ” ©« "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" г¤ «пҐвбп.
+        ЋЎа йҐ­ЁҐ Є "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\4.2.1\\CompilerIdC\\CompilerIdC.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+      
+      ‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+          ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+          ЋиЁЎ®Є: 0
+      
+      Џа®и«® ўаҐ¬Ґ­Ё 00:00:01.98
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/4.2.1/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Microsoft MPI/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Huawei/yandex-cloud/bin/"
+      - "C:/Users/Huawei/.dotnet/tools/"
+      - "C:/tools/dart-sdk/bin/"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/PATH%/"
+      - "C:/Program Files/Vim/vim91/vim.exe/"
+      - "C:/tools/neovim/nvim-win64/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Microsoft MPI/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Huawei/yandex-cloud/bin/"
+      - "C:/Users/Huawei/.dotnet/tools/"
+      - "C:/tools/dart-sdk/bin/"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/PATH%/"
+      - "C:/Program Files/Vim/vim91/vim.exe/"
+      - "C:/tools/neovim/nvim-win64/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link"
+      - "C:/Program Files/Microsoft MPI/Bin/lld-link.com"
+      - "C:/Program Files/Microsoft MPI/Bin/lld-link.exe"
+      - "C:/Program Files/Microsoft MPI/Bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link.com"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link.exe"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/Huawei/yandex-cloud/bin/lld-link.com"
+      - "C:/Users/Huawei/yandex-cloud/bin/lld-link.exe"
+      - "C:/Users/Huawei/yandex-cloud/bin/lld-link"
+      - "C:/Users/Huawei/.dotnet/tools/lld-link.com"
+      - "C:/Users/Huawei/.dotnet/tools/lld-link.exe"
+      - "C:/Users/Huawei/.dotnet/tools/lld-link"
+      - "C:/tools/dart-sdk/bin/lld-link.com"
+      - "C:/tools/dart-sdk/bin/lld-link.exe"
+      - "C:/tools/dart-sdk/bin/lld-link"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/lld-link.com"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/lld-link.exe"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/lld-link"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/lld-link.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/lld-link.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/lld-link"
+      - "C:/Program Files (x86)/Bitvise SSH Client/lld-link.com"
+      - "C:/Program Files (x86)/Bitvise SSH Client/lld-link.exe"
+      - "C:/Program Files (x86)/Bitvise SSH Client/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Program Files/CMake/bin/PATH%/lld-link.com"
+      - "C:/Program Files/CMake/bin/PATH%/lld-link.exe"
+      - "C:/Program Files/CMake/bin/PATH%/lld-link"
+      - "C:/Program Files/Vim/vim91/vim.exe/lld-link.com"
+      - "C:/Program Files/Vim/vim91/vim.exe/lld-link.exe"
+      - "C:/Program Files/Vim/vim91/vim.exe/lld-link"
+      - "C:/tools/neovim/nvim-win64/bin/lld-link.com"
+      - "C:/tools/neovim/nvim-win64/bin/lld-link.exe"
+      - "C:/tools/neovim/nvim-win64/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Microsoft MPI/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Huawei/yandex-cloud/bin/"
+      - "C:/Users/Huawei/.dotnet/tools/"
+      - "C:/tools/dart-sdk/bin/"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/PATH%/"
+      - "C:/Program Files/Vim/vim91/vim.exe/"
+      - "C:/tools/neovim/nvim-win64/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Microsoft MPI/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Huawei/yandex-cloud/bin/"
+      - "C:/Users/Huawei/.dotnet/tools/"
+      - "C:/tools/dart-sdk/bin/"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/PATH%/"
+      - "C:/Program Files/Vim/vim91/vim.exe/"
+      - "C:/tools/neovim/nvim-win64/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/mt"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/mt.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/mt.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/mt"
+      - "C:/Program Files/Razer Chroma SDK/bin/mt.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/mt.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/mt"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/mt.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/mt.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/mt"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/mt.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/mt.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/mt"
+      - "C:/Program Files/Microsoft MPI/Bin/mt.com"
+      - "C:/Program Files/Microsoft MPI/Bin/mt.exe"
+      - "C:/Program Files/Microsoft MPI/Bin/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files/Amazon/AWSCLIV2/mt.com"
+      - "C:/Program Files/Amazon/AWSCLIV2/mt.exe"
+      - "C:/Program Files/Amazon/AWSCLIV2/mt"
+      - "C:/ProgramData/chocolatey/bin/mt.com"
+      - "C:/ProgramData/chocolatey/bin/mt.exe"
+      - "C:/ProgramData/chocolatey/bin/mt"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/Huawei/yandex-cloud/bin/mt.com"
+      - "C:/Users/Huawei/yandex-cloud/bin/mt.exe"
+      - "C:/Users/Huawei/yandex-cloud/bin/mt"
+      - "C:/Users/Huawei/.dotnet/tools/mt.com"
+      - "C:/Users/Huawei/.dotnet/tools/mt.exe"
+      - "C:/Users/Huawei/.dotnet/tools/mt"
+      - "C:/tools/dart-sdk/bin/mt.com"
+      - "C:/tools/dart-sdk/bin/mt.exe"
+      - "C:/tools/dart-sdk/bin/mt"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/mt.com"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/mt.exe"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/mt"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/mt.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/mt.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/mt"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
+      - "C:/Program Files/nodejs/mt.com"
+      - "C:/Program Files/nodejs/mt.exe"
+      - "C:/Program Files/nodejs/mt"
+      - "C:/Program Files/Docker/Docker/resources/bin/mt.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/mt.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/mt.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/mt.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/mt"
+      - "C:/Program Files (x86)/Bitvise SSH Client/mt.com"
+      - "C:/Program Files (x86)/Bitvise SSH Client/mt.exe"
+      - "C:/Program Files (x86)/Bitvise SSH Client/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/mt.com"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/mt.exe"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt"
+      - "C:/Program Files/CMake/bin/PATH%/mt.com"
+      - "C:/Program Files/CMake/bin/PATH%/mt.exe"
+      - "C:/Program Files/CMake/bin/PATH%/mt"
+      - "C:/Program Files/Vim/vim91/vim.exe/mt.com"
+      - "C:/Program Files/Vim/vim91/vim.exe/mt.exe"
+      - "C:/Program Files/Vim/vim91/vim.exe/mt"
+      - "C:/tools/neovim/nvim-win64/bin/mt.com"
+      - "C:/tools/neovim/nvim-win64/bin/mt.exe"
+      - "C:/tools/neovim/nvim-win64/bin/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Microsoft MPI/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Huawei/yandex-cloud/bin/"
+      - "C:/Users/Huawei/.dotnet/tools/"
+      - "C:/tools/dart-sdk/bin/"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/PATH%/"
+      - "C:/Program Files/Vim/vim91/vim.exe/"
+      - "C:/tools/neovim/nvim-win64/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+      (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+      
+      ‘Ў®аЄ  ­ з в  05.01.2026 20:04:20.
+      Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\4.2.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+      PrepareForBuild:
+        ‘®§¤ ­ЁҐ Є в «®Ј  "Debug\\".
+        ‘®§¤ ­ЁҐ Є в «®Ј  "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        ‘®§¤ ­ЁҐ "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\4.2.1\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ” ©« "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" г¤ «пҐвбп.
+        ЋЎа йҐ­ЁҐ Є "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\4.2.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+      
+      ‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+          ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+          ЋиЁЎ®Є: 0
+      
+      Џа®и«® ўаҐ¬Ґ­Ё 00:00:01.05
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/4.2.1/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Microsoft MPI/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Huawei/yandex-cloud/bin/"
+      - "C:/Users/Huawei/.dotnet/tools/"
+      - "C:/tools/dart-sdk/bin/"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/PATH%/"
+      - "C:/Program Files/Vim/vim91/vim.exe/"
+      - "C:/tools/neovim/nvim-win64/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link"
+      - "C:/Program Files/Microsoft MPI/Bin/lld-link.com"
+      - "C:/Program Files/Microsoft MPI/Bin/lld-link.exe"
+      - "C:/Program Files/Microsoft MPI/Bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link.com"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link.exe"
+      - "C:/Program Files/Amazon/AWSCLIV2/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/Huawei/yandex-cloud/bin/lld-link.com"
+      - "C:/Users/Huawei/yandex-cloud/bin/lld-link.exe"
+      - "C:/Users/Huawei/yandex-cloud/bin/lld-link"
+      - "C:/Users/Huawei/.dotnet/tools/lld-link.com"
+      - "C:/Users/Huawei/.dotnet/tools/lld-link.exe"
+      - "C:/Users/Huawei/.dotnet/tools/lld-link"
+      - "C:/tools/dart-sdk/bin/lld-link.com"
+      - "C:/tools/dart-sdk/bin/lld-link.exe"
+      - "C:/tools/dart-sdk/bin/lld-link"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/lld-link.com"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/lld-link.exe"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/lld-link"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/lld-link.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/lld-link.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/lld-link"
+      - "C:/Program Files (x86)/Bitvise SSH Client/lld-link.com"
+      - "C:/Program Files (x86)/Bitvise SSH Client/lld-link.exe"
+      - "C:/Program Files (x86)/Bitvise SSH Client/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Program Files/CMake/bin/PATH%/lld-link.com"
+      - "C:/Program Files/CMake/bin/PATH%/lld-link.exe"
+      - "C:/Program Files/CMake/bin/PATH%/lld-link"
+      - "C:/Program Files/Vim/vim91/vim.exe/lld-link.com"
+      - "C:/Program Files/Vim/vim91/vim.exe/lld-link.exe"
+      - "C:/Program Files/Vim/vim91/vim.exe/lld-link"
+      - "C:/tools/neovim/nvim-win64/bin/lld-link.com"
+      - "C:/tools/neovim/nvim-win64/bin/lld-link.exe"
+      - "C:/tools/neovim/nvim-win64/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:580 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:553 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Microsoft MPI/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Amazon/AWSCLIV2/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Huawei/yandex-cloud/bin/"
+      - "C:/Users/Huawei/.dotnet/tools/"
+      - "C:/tools/dart-sdk/bin/"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files/CMake/bin/PATH%/"
+      - "C:/Program Files/Vim/vim91/vim.exe/"
+      - "C:/tools/neovim/nvim-win64/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/Assimp/bin/"
+      - "C:/Program Files (x86)/Assimp/sbin/"
+      - "C:/Program Files (x86)/Assimp/"
+    searched_directories:
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/rc.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/rc.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/rc"
+      - "C:/Program Files/Razer Chroma SDK/bin/rc.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/rc.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/rc"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/rc.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/rc.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/rc"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/rc.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/rc.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/rc"
+      - "C:/Program Files/Microsoft MPI/Bin/rc.com"
+      - "C:/Program Files/Microsoft MPI/Bin/rc.exe"
+      - "C:/Program Files/Microsoft MPI/Bin/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files/Amazon/AWSCLIV2/rc.com"
+      - "C:/Program Files/Amazon/AWSCLIV2/rc.exe"
+      - "C:/Program Files/Amazon/AWSCLIV2/rc"
+      - "C:/ProgramData/chocolatey/bin/rc.com"
+      - "C:/ProgramData/chocolatey/bin/rc.exe"
+      - "C:/ProgramData/chocolatey/bin/rc"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/Huawei/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/Huawei/yandex-cloud/bin/rc.com"
+      - "C:/Users/Huawei/yandex-cloud/bin/rc.exe"
+      - "C:/Users/Huawei/yandex-cloud/bin/rc"
+      - "C:/Users/Huawei/.dotnet/tools/rc.com"
+      - "C:/Users/Huawei/.dotnet/tools/rc.exe"
+      - "C:/Users/Huawei/.dotnet/tools/rc"
+      - "C:/tools/dart-sdk/bin/rc.com"
+      - "C:/tools/dart-sdk/bin/rc.exe"
+      - "C:/tools/dart-sdk/bin/rc"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/rc.com"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/rc.exe"
+      - "C:/Users/Huawei/AppData/Local/Pub/Cache/bin/rc"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/rc.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/rc.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Microsoft VS Code/bin/rc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
+      - "C:/Program Files/nodejs/rc.com"
+      - "C:/Program Files/nodejs/rc.exe"
+      - "C:/Program Files/nodejs/rc"
+      - "C:/Program Files/Docker/Docker/resources/bin/rc.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/rc.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/rc.com"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/rc.exe"
+      - "C:/Users/Huawei/AppData/Local/Programs/Python/Python39/Scripts/rc"
+      - "C:/Program Files (x86)/Bitvise SSH Client/rc.com"
+      - "C:/Program Files (x86)/Bitvise SSH Client/rc.exe"
+      - "C:/Program Files (x86)/Bitvise SSH Client/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/rc.com"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/rc.exe"
+      - "C:/Program Files/Microsoft SQL Server/130/Tools/Binn/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc"
+      - "C:/Program Files/CMake/bin/PATH%/rc.com"
+      - "C:/Program Files/CMake/bin/PATH%/rc.exe"
+      - "C:/Program Files/CMake/bin/PATH%/rc"
+      - "C:/Program Files/Vim/vim91/vim.exe/rc.com"
+      - "C:/Program Files/Vim/vim91/vim.exe/rc.exe"
+      - "C:/Program Files/Vim/vim91/vim.exe/rc"
+      - "C:/tools/neovim/nvim-win64/bin/rc.com"
+      - "C:/tools/neovim/nvim-win64/bin/rc.exe"
+      - "C:/tools/neovim/nvim-win64/bin/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files (x86)/Assimp/bin/rc.com"
+      - "C:/Program Files (x86)/Assimp/bin/rc.exe"
+      - "C:/Program Files (x86)/Assimp/bin/rc"
+      - "C:/Program Files (x86)/Assimp/sbin/rc.com"
+      - "C:/Program Files (x86)/Assimp/sbin/rc.exe"
+      - "C:/Program Files (x86)/Assimp/sbin/rc"
+      - "C:/Program Files (x86)/Assimp/rc.com"
+      - "C:/Program Files (x86)/Assimp/rc.exe"
+      - "C:/Program Files (x86)/Assimp/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Amazon\\AWSCLIV2\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Huawei\\yandex-cloud\\bin"
+        - "C:\\Users\\Huawei\\.dotnet\\tools"
+        - "C:\\tools\\dart-sdk\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Pub\\Cache\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "PATH%"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Python\\Python39\\Scripts"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Huawei\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\Vim\\vim91\\vim.exe"
+        - "C:\\tools\\neovim\\nvim-win64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Assimp"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/Assimp"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-y3fbn8"
+      binary: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-y3fbn8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-y3fbn8'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_ec55f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+        (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+        
+        ‘Ў®аЄ  ­ з в  05.01.2026 20:04:21.
+        Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3fbn8\\cmTC_ec55f.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        PrepareForBuild:
+          ‘®§¤ ­ЁҐ Є в «®Ј  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3fbn8\\Debug\\".
+          ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_ec55f.dir\\Debug\\cmTC_ec55f.tlog\\".
+        InitializeBuildStatus:
+          ‘®§¤ ­ЁҐ "cmTC_ec55f.dir\\Debug\\cmTC_ec55f.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_ec55f.dir\\Debug\\\\" /Fd"cmTC_ec55f.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 19.29.30159 ¤«п x64
+          CMakeCCompilerABI.c
+          (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_ec55f.dir\\Debug\\\\" /Fd"cmTC_ec55f.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3fbn8\\Debug\\cmTC_ec55f.exe" /INCREMENTAL /ILK:"cmTC_ec55f.dir\\Debug\\cmTC_ec55f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-y3fbn8/Debug/cmTC_ec55f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-y3fbn8/Debug/cmTC_ec55f.lib" /MACHINE:X64  /machine:x64 cmTC_ec55f.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_ec55f.vcxproj -> C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3fbn8\\Debug\\cmTC_ec55f.exe
+        FinalizeBuildStatus:
+          ” ©« "cmTC_ec55f.dir\\Debug\\cmTC_ec55f.tlog\\unsuccessfulbuild" г¤ «пҐвбп.
+          ЋЎа йҐ­ЁҐ Є "cmTC_ec55f.dir\\Debug\\cmTC_ec55f.tlog\\cmTC_ec55f.lastbuildstate".
+        ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3fbn8\\cmTC_ec55f.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        
+        ‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+            ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+            ЋиЁЎ®Є: 0
+        
+        Џа®и«® ўаҐ¬Ґ­Ё 00:00:00.64
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.29.30159.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-e3jq6i"
+      binary: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-e3jq6i"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-e3jq6i'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_f18e3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+        (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+        
+        ‘Ў®аЄ  ­ з в  05.01.2026 20:04:23.
+        Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e3jq6i\\cmTC_f18e3.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        PrepareForBuild:
+          ‘®§¤ ­ЁҐ Є в «®Ј  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e3jq6i\\Debug\\".
+          ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_f18e3.dir\\Debug\\cmTC_f18e3.tlog\\".
+        InitializeBuildStatus:
+          ‘®§¤ ­ЁҐ "cmTC_f18e3.dir\\Debug\\cmTC_f18e3.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_f18e3.dir\\Debug\\\\" /Fd"cmTC_f18e3.dir\\Debug\\vc142.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 19.29.30159 ¤«п x64
+          CMakeCXXCompilerABI.cpp
+          (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_f18e3.dir\\Debug\\\\" /Fd"cmTC_f18e3.dir\\Debug\\vc142.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e3jq6i\\Debug\\cmTC_f18e3.exe" /INCREMENTAL /ILK:"cmTC_f18e3.dir\\Debug\\cmTC_f18e3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-e3jq6i/Debug/cmTC_f18e3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-e3jq6i/Debug/cmTC_f18e3.lib" /MACHINE:X64  /machine:x64 cmTC_f18e3.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_f18e3.vcxproj -> C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e3jq6i\\Debug\\cmTC_f18e3.exe
+        FinalizeBuildStatus:
+          ” ©« "cmTC_f18e3.dir\\Debug\\cmTC_f18e3.tlog\\unsuccessfulbuild" г¤ «пҐвбп.
+          ЋЎа йҐ­ЁҐ Є "cmTC_f18e3.dir\\Debug\\cmTC_f18e3.tlog\\cmTC_f18e3.lastbuildstate".
+        ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e3jq6i\\cmTC_f18e3.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        
+        ‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+            ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+            ЋиЁЎ®Є: 0
+        
+        Џа®и«® ўаҐ¬Ґ­Ё 00:00:00.60
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:107 (PROJECT)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.29.30159.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "contrib/zlib/CMakeLists.txt:35 (check_include_file)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-nx8qg2"
+      binary: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-nx8qg2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Huawei/Documents/Assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-nx8qg2'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_0431f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+        (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+        
+        ‘Ў®аЄ  ­ з в  05.01.2026 20:04:24.
+        Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nx8qg2\\cmTC_0431f.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        PrepareForBuild:
+          ‘®§¤ ­ЁҐ Є в «®Ј  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nx8qg2\\Debug\\".
+          ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_0431f.dir\\Debug\\cmTC_0431f.tlog\\".
+        InitializeBuildStatus:
+          ‘®§¤ ­ЁҐ "cmTC_0431f.dir\\Debug\\cmTC_0431f.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_0431f.dir\\Debug\\\\" /Fd"cmTC_0431f.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nx8qg2\\CheckIncludeFile.c"
+          ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 19.29.30159 ¤«п x64
+          CheckIncludeFile.c
+          (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_0431f.dir\\Debug\\\\" /Fd"cmTC_0431f.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nx8qg2\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nx8qg2\\Debug\\cmTC_0431f.exe" /INCREMENTAL /ILK:"cmTC_0431f.dir\\Debug\\cmTC_0431f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-nx8qg2/Debug/cmTC_0431f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-nx8qg2/Debug/cmTC_0431f.lib" /MACHINE:X64  /machine:x64 cmTC_0431f.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_0431f.vcxproj -> C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nx8qg2\\Debug\\cmTC_0431f.exe
+        FinalizeBuildStatus:
+          ” ©« "cmTC_0431f.dir\\Debug\\cmTC_0431f.tlog\\unsuccessfulbuild" г¤ «пҐвбп.
+          ЋЎа йҐ­ЁҐ Є "cmTC_0431f.dir\\Debug\\cmTC_0431f.tlog\\cmTC_0431f.lastbuildstate".
+        ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nx8qg2\\cmTC_0431f.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        
+        ‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+            ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+            ЋиЁЎ®Є: 0
+        
+        Џа®и«® ўаҐ¬Ґ­Ё 00:00:00.61
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "contrib/zlib/CMakeLists.txt:36 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-es42i5"
+      binary: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-es42i5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Huawei/Documents/Assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-es42i5'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_ce5fa.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+        (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+        
+        ‘Ў®аЄ  ­ з в  05.01.2026 20:04:25.
+        Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-es42i5\\cmTC_ce5fa.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        PrepareForBuild:
+          ‘®§¤ ­ЁҐ Є в «®Ј  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-es42i5\\Debug\\".
+          ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_ce5fa.dir\\Debug\\cmTC_ce5fa.tlog\\".
+        InitializeBuildStatus:
+          ‘®§¤ ­ЁҐ "cmTC_ce5fa.dir\\Debug\\cmTC_ce5fa.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_ce5fa.dir\\Debug\\\\" /Fd"cmTC_ce5fa.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-es42i5\\CheckIncludeFile.c"
+          ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 19.29.30159 ¤«п x64
+          CheckIncludeFile.c
+          (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_ce5fa.dir\\Debug\\\\" /Fd"cmTC_ce5fa.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-es42i5\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-es42i5\\Debug\\cmTC_ce5fa.exe" /INCREMENTAL /ILK:"cmTC_ce5fa.dir\\Debug\\cmTC_ce5fa.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-es42i5/Debug/cmTC_ce5fa.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-es42i5/Debug/cmTC_ce5fa.lib" /MACHINE:X64  /machine:x64 cmTC_ce5fa.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_ce5fa.vcxproj -> C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-es42i5\\Debug\\cmTC_ce5fa.exe
+        FinalizeBuildStatus:
+          ” ©« "cmTC_ce5fa.dir\\Debug\\cmTC_ce5fa.tlog\\unsuccessfulbuild" г¤ «пҐвбп.
+          ЋЎа йҐ­ЁҐ Є "cmTC_ce5fa.dir\\Debug\\cmTC_ce5fa.tlog\\cmTC_ce5fa.lastbuildstate".
+        ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-es42i5\\cmTC_ce5fa.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        
+        ‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+            ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+            ЋиЁЎ®Є: 0
+        
+        Џа®и«® ўаҐ¬Ґ­Ё 00:00:00.62
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "contrib/zlib/CMakeLists.txt:37 (check_include_file)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-lsu09e"
+      binary: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-lsu09e"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Huawei/Documents/Assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-lsu09e'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_42cdf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+        (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+        
+        ‘Ў®аЄ  ­ з в  05.01.2026 20:04:26.
+        Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lsu09e\\cmTC_42cdf.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        PrepareForBuild:
+          ‘®§¤ ­ЁҐ Є в «®Ј  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lsu09e\\Debug\\".
+          ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_42cdf.dir\\Debug\\cmTC_42cdf.tlog\\".
+        InitializeBuildStatus:
+          ‘®§¤ ­ЁҐ "cmTC_42cdf.dir\\Debug\\cmTC_42cdf.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_42cdf.dir\\Debug\\\\" /Fd"cmTC_42cdf.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lsu09e\\CheckIncludeFile.c"
+          ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 19.29.30159 ¤«п x64
+          CheckIncludeFile.c
+          (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_42cdf.dir\\Debug\\\\" /Fd"cmTC_42cdf.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lsu09e\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lsu09e\\Debug\\cmTC_42cdf.exe" /INCREMENTAL /ILK:"cmTC_42cdf.dir\\Debug\\cmTC_42cdf.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-lsu09e/Debug/cmTC_42cdf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-lsu09e/Debug/cmTC_42cdf.lib" /MACHINE:X64  /machine:x64 cmTC_42cdf.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_42cdf.vcxproj -> C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lsu09e\\Debug\\cmTC_42cdf.exe
+        FinalizeBuildStatus:
+          ” ©« "cmTC_42cdf.dir\\Debug\\cmTC_42cdf.tlog\\unsuccessfulbuild" г¤ «пҐвбп.
+          ЋЎа йҐ­ЁҐ Є "cmTC_42cdf.dir\\Debug\\cmTC_42cdf.tlog\\cmTC_42cdf.lastbuildstate".
+        ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lsu09e\\cmTC_42cdf.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        
+        ‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+            ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+            ЋиЁЎ®Є: 0
+        
+        Џа®и«® ўаҐ¬Ґ­Ё 00:00:00.60
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "contrib/zlib/CMakeLists.txt:55 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-iy0sxg"
+      binary: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-iy0sxg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Huawei/Documents/Assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-iy0sxg'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_14f2a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+        (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+        
+        ‘Ў®аЄ  ­ з в  05.01.2026 20:04:27.
+        Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        PrepareForBuild:
+          ‘®§¤ ­ЁҐ Є в «®Ј  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\Debug\\".
+          ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_14f2a.dir\\Debug\\cmTC_14f2a.tlog\\".
+        InitializeBuildStatus:
+          ‘®§¤ ­ЁҐ "cmTC_14f2a.dir\\Debug\\cmTC_14f2a.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_14f2a.dir\\Debug\\\\" /Fd"cmTC_14f2a.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c"
+          ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 19.29.30159 ¤«п x64
+          OFF64_T.c
+          (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_14f2a.dir\\Debug\\\\" /Fd"cmTC_14f2a.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c"
+        C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(29,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+        C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(30,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+        C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(31,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+        C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(32,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+        C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(33,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+        ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо) б ®иЁЎЄ®©.
+        
+        ЋиЁЎЄ  бЎ®аЄЁ.
+        
+        "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj" (жҐ«Ґў®© ®ЎкҐЄв Ї® г¬®«з ­Ёо) (1) ->
+        (–Ґ«Ґў®© ®ЎкҐЄв ClCompile) -> 
+          C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(29,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+          C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(30,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+          C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(31,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+          C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(32,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+          C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\OFF64_T.c(33,12): error C2065: off64_t: ­Ґ®Ўкпў«Ґ­­л© Ё¤Ґ­вЁдЁЄ в®а [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iy0sxg\\cmTC_14f2a.vcxproj]
+        
+            ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+            ЋиЁЎ®Є: 5
+        
+        Џа®и«® ўаҐ¬Ґ­Ё 00:00:00.44
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "contrib/zlib/CMakeLists.txt:64 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-iig2cx"
+      binary: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-iig2cx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Huawei/Documents/Assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-iig2cx'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_4cca7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+        (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+        
+        ‘Ў®аЄ  ­ з в  05.01.2026 20:04:28.
+        Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\cmTC_4cca7.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        PrepareForBuild:
+          ‘®§¤ ­ЁҐ Є в «®Ј  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\Debug\\".
+          ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_4cca7.dir\\Debug\\cmTC_4cca7.tlog\\".
+        InitializeBuildStatus:
+          ‘®§¤ ­ЁҐ "cmTC_4cca7.dir\\Debug\\cmTC_4cca7.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_4cca7.dir\\Debug\\\\" /Fd"cmTC_4cca7.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\CheckFunctionExists.c"
+          ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 19.29.30159 ¤«п x64
+          CheckFunctionExists.c
+          (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_4cca7.dir\\Debug\\\\" /Fd"cmTC_4cca7.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\Debug\\cmTC_4cca7.exe" /INCREMENTAL /ILK:"cmTC_4cca7.dir\\Debug\\cmTC_4cca7.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-iig2cx/Debug/cmTC_4cca7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-iig2cx/Debug/cmTC_4cca7.lib" /MACHINE:X64  /machine:x64 cmTC_4cca7.dir\\Debug\\CheckFunctionExists.obj
+        CheckFunctionExists.obj : error LNK2019: ббл«Є  ­  ­Ґа §аҐиҐ­­л© ў­Ґи­Ё© бЁ¬ў®« fseeko ў дг­ЄжЁЁ main. [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\cmTC_4cca7.vcxproj]
+        C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\Debug\\cmTC_4cca7.exe : fatal error LNK1120: ­Ґа §аҐиҐ­­ле ў­Ґи­Ёе н«Ґ¬Ґ­в®ў: 1 [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\cmTC_4cca7.vcxproj]
+        ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\cmTC_4cca7.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо) б ®иЁЎЄ®©.
+        
+        ЋиЁЎЄ  бЎ®аЄЁ.
+        
+        "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\cmTC_4cca7.vcxproj" (жҐ«Ґў®© ®ЎкҐЄв Ї® г¬®«з ­Ёо) (1) ->
+        (–Ґ«Ґў®© ®ЎкҐЄв Link) -> 
+          CheckFunctionExists.obj : error LNK2019: ббл«Є  ­  ­Ґа §аҐиҐ­­л© ў­Ґи­Ё© бЁ¬ў®« fseeko ў дг­ЄжЁЁ main. [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\cmTC_4cca7.vcxproj]
+          C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\Debug\\cmTC_4cca7.exe : fatal error LNK1120: ­Ґа §аҐиҐ­­ле ў­Ґи­Ёе н«Ґ¬Ґ­в®ў: 1 [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iig2cx\\cmTC_4cca7.vcxproj]
+        
+            ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+            ЋиЁЎ®Є: 2
+        
+        Џа®и«® ўаҐ¬Ґ­Ё 00:00:00.58
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "contrib/zlib/CMakeLists.txt:72 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-xzb4no"
+      binary: "C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-xzb4no"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Huawei/Documents/Assimp/cmake-modules"
+    buildResult:
+      variable: "Z_HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/CMakeScratch/TryCompile-xzb4no'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_32cf4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine ўҐабЁЁ 16.11.6+a918ceb31 ¤«п .NET Framework
+        (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+        
+        ‘Ў®аЄ  ­ з в  05.01.2026 20:04:30.
+        Џа®ҐЄв "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\cmTC_32cf4.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+        PrepareForBuild:
+          ‘®§¤ ­ЁҐ Є в «®Ј  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\Debug\\".
+          ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_32cf4.dir\\Debug\\cmTC_32cf4.tlog\\".
+        InitializeBuildStatus:
+          ‘®§¤ ­ЁҐ "cmTC_32cf4.dir\\Debug\\cmTC_32cf4.tlog\\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_32cf4.dir\\Debug\\\\" /Fd"cmTC_32cf4.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\CheckIncludeFile.c"
+          ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 19.29.30159 ¤«п x64
+          CheckIncludeFile.c
+          (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_32cf4.dir\\Debug\\\\" /Fd"cmTC_32cf4.dir\\Debug\\vc142.pdb" /external:W1 /TC /errorReport:queue "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\CheckIncludeFile.c"
+        C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\CheckIncludeFile.c(1,10): fatal error C1083: ЌҐ г¤ Ґвбп ®вЄалвм д ©« ўЄ«озҐ­ЁҐ: unistd.h: No such file or directory, [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\cmTC_32cf4.vcxproj]
+        ‘Ў®аЄ  Їа®ҐЄв  "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\cmTC_32cf4.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо) б ®иЁЎЄ®©.
+        
+        ЋиЁЎЄ  бЎ®аЄЁ.
+        
+        "C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\cmTC_32cf4.vcxproj" (жҐ«Ґў®© ®ЎкҐЄв Ї® г¬®«з ­Ёо) (1) ->
+        (–Ґ«Ґў®© ®ЎкҐЄв ClCompile) -> 
+          C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\CheckIncludeFile.c(1,10): fatal error C1083: ЌҐ г¤ Ґвбп ®вЄалвм д ©« ўЄ«озҐ­ЁҐ: unistd.h: No such file or directory, [C:\\Users\\Huawei\\Documents\\Assimp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xzb4no\\cmTC_32cf4.vcxproj]
+        
+            ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+            ЋиЁЎ®Є: 1
+        
+        Џа®и«® ўаҐ¬Ґ­Ё 00:00:00.42
+        
+      exitCode: 1
+...

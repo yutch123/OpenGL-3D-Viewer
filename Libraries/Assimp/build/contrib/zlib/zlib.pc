@@ -1,0 +1,13 @@
+prefix=C:/Users/Huawei/Documents/Assimp/Assimp_install
+exec_prefix=C:/Users/Huawei/Documents/Assimp/Assimp_install
+libdir=
+sharedlibdir=
+includedir=
+
+Name: zlib
+Description: zlib compression library
+Version: 
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

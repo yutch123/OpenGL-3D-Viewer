@@ -1,10 +1,4 @@
-﻿  Model.cpp
-  Main.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-C:\Users\Huawei\source\repos\OPENGL_2.0\Libraries\include\glad\glad.h(32): message : see previous definition of 'APIENTRY'
-C:\Users\Huawei\source\repos\OPENGL_2.0\src\Main.cpp(419,26): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Huawei\source\repos\OPENGL_2.0\src\Main.cpp(422,22): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+﻿LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
   Finished generating code
   OPENGL_2.0.vcxproj -> C:\Users\Huawei\source\repos\OPENGL_2.0\x64\Release\OPENGL_2.0.exe

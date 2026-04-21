@@ -39,19 +39,6 @@ void Model::Draw(Shader& shader)
 
         const auto& textures = meshes[i].textures;
 
-        std::cout << "[Draw] Mesh " << i
-            << " | textures count = " << textures.size()
-            << std::endl;
-
-        for (size_t t = 0; t < textures.size(); ++t)
-        {
-            std::cout << "    texture[" << t << "]"
-                << " | id = " << textures[t].id
-                << " | type = " << textures[t].type
-                << " | path = " << textures[t].path
-                << std::endl;
-        }
-
         int diffuseIndex = FindDiffuseTextureIndex(textures);
 
         if (diffuseIndex >= 0)
@@ -67,9 +54,6 @@ void Model::Draw(Shader& shader)
             shader.setBool("useTexture", false);
             shader.setVec3("objectColor", meshColors[i]);
 
-            std::cout << "[Draw] Mesh " << i
-                << " has no valid diffuse texture, fallback to objectColor"
-                << std::endl;
         }
 
         meshes[i].Draw(shader);

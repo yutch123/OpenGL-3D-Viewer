@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\CCompilerTest.c">
+      <Filter>UnitTests\Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\code\Common\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\code\Common\Base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utSimd.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utIOSystem.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utIOStreamBuffer.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utIssues.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utAnim.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\AssimpAPITest.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\AssimpAPITest_aiMatrix3x3.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\AssimpAPITest_aiMatrix4x4.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\AssimpAPITest_aiQuaternion.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\AssimpAPITest_aiVector2D.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\AssimpAPITest_aiVector3D.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\MathTest.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utBatchLoader.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utDefaultIOStream.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utFastAtof.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utMetadata.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\SceneDiffer.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\AbstractImportExportBase.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utTypes.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utVersion.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utParsingUtils.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utProfiler.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utSharedPPData.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utStringUtils.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utMaybe.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utMesh.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utStandardShapes.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\uiScene.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utLineSplitter.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utSpatialSort.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utAssertHandler.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utXmlParser.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utBase64.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utHash.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utBaseProcess.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Common\utLogger.cpp">
+      <Filter>UnitTests\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\Geometry\utGeometryUtils.cpp">
+      <Filter>UnitTests\GeometryTools</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\Assxml\utAssxmlImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utLWSImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utLWOImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utSMDImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utglTFImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utglTF2ImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utHMPImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utIFCImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utFBXImporterExporter.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utImporter.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utExporter.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ut3DImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ut3DSImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utACImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utAMFImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utASEImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utD3MFImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utQ3DImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utSTLImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utXImporterExporter.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utX3DImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utDXFImporterExporter.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utPMXImporter.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utPLYImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utObjImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utObjTools.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utOpenGEXImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utSIBImporter.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utBlenderIntermediate.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utBlendImportAreaLight.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utBlenderImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utBlendImportMaterials.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utBlenderWork.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utBVHImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utCSMImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utB3DImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utMDCImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utAssbinImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utAssjsonImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utCOBImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utOgreImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utQ3BSPFileImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utOFFImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utNFFImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utXGLImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utMD2Importer.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utMD5Importer.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\utMDLImporter.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\MDL\utMDLImporter_HL1_ImportSettings.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\MDL\utMDLImporter_HL1_Materials.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\MDL\utMDLImporter_HL1_Nodes.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\RAW\utRAWImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\Terragen\utTerragenImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\Pbrt\utPbrtImportExport.cpp">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utMaterialSystem.cpp">
+      <Filter>UnitTests\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utMatrix3x3.cpp">
+      <Filter>UnitTests\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utMatrix4x4.cpp">
+      <Filter>UnitTests\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utVector3.cpp">
+      <Filter>UnitTests\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utImproveCacheLocality.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utFixInfacingNormals.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utGenNormals.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utTriangulate.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utTextureTransform.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utRemoveRedundantMaterials.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utRemoveVCProcess.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utScaleProcess.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utArmaturePopulate.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utJoinVertices.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utRemoveComments.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utRemoveComponent.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utVertexTriangleAdjacency.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utSplitLargeMeshes.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utFindDegenerates.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utFindInvalidData.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utLimitBoneWeights.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utPretransformVertices.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utScenePreprocessor.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utTargetAnimation.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utSortByPType.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utSceneCombiner.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\test\unit\utGenBoundingBoxesProcess.cpp">
+      <Filter>UnitTests\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Huawei\Documents\Assimp\contrib\googletest\googletest\src\gtest-all.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Huawei\Documents\Assimp\test\unit\MathTest.h">
+      <Filter>UnitTests\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Huawei\Documents\Assimp\test\unit\RandomNumberGeneration.h">
+      <Filter>UnitTests\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Huawei\Documents\Assimp\test\unit\SceneDiffer.h">
+      <Filter>UnitTests\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Huawei\Documents\Assimp\test\unit\UTLogStream.h">
+      <Filter>UnitTests\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Huawei\Documents\Assimp\test\unit\TestIOSystem.h">
+      <Filter>UnitTests\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Huawei\Documents\Assimp\test\unit\TestModelFactory.h">
+      <Filter>UnitTests\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Huawei\Documents\Assimp\test\unit\ImportExport\MDL\MDLHL1TestFiles.h">
+      <Filter>UnitTests\ImportExport</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Huawei\Documents\Assimp\test\unit\Tools\TestTools.h">
+      <Filter>UnitTests\Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Huawei\Documents\Assimp\test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D8AE1B8E-4AC8-38B2-BE2D-B51596F8DE3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests">
+      <UniqueIdentifier>{F6C8176A-E33F-30C0-9F0A-83E39D357099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests\Common">
+      <UniqueIdentifier>{B033C24E-FCED-34C5-B326-DEA6689D5D61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests\Compiler">
+      <UniqueIdentifier>{A30F64F4-7C72-353E-A441-B3F2E2C8D06F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests\GeometryTools">
+      <UniqueIdentifier>{5148C0DA-A572-3E3A-9468-F7F918A3083D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests\ImportExport">
+      <UniqueIdentifier>{F2E48796-CBFF-3C6B-AA82-6AA43615EB53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests\Material">
+      <UniqueIdentifier>{DD5FEC12-6D4E-3390-A005-9AC225229E91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests\Math">
+      <UniqueIdentifier>{A4CC23D1-C461-3D11-A838-0EA8F3C9FE7C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests\PostProcess">
+      <UniqueIdentifier>{2B7DD40F-A322-372E-A96F-83DBC8E6D4CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests\Tools">
+      <UniqueIdentifier>{D0EB2016-ED45-3A40-88F7-E25C58A7B6BB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

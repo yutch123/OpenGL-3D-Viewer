@@ -1,0 +1,10 @@
+C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/uninstall.dir
+C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/UpdateAssimpLibsDebugSymbolsAndDLLs.dir
+C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/INSTALL.dir
+C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Huawei/Documents/Assimp/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Huawei/Documents/Assimp/build/contrib/zlib/CMakeFiles/zlibstatic.dir
+C:/Users/Huawei/Documents/Assimp/build/contrib/zlib/CMakeFiles/INSTALL.dir
+C:/Users/Huawei/Documents/Assimp/build/contrib/zlib/CMakeFiles/ALL_BUILD.dir
+C:/Users/Huawei/Documents/Assimp/build/code/CMakeFiles/assimp.dir
+C:/Users/Huawei/Documents/Assimp/build/code/CMakeFiles/INSTALL.dir
